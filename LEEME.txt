@@ -2,8 +2,16 @@ EXAMEN DE CAPACITACIÓN ELÉCTRICA — EPE
 Módulos 1 y 2 · 210 preguntas de opción múltiple
 
 
-CÓMO SE USA
+EN INTERNET
 -----------
+http://examen-epe.constantinoferrucci.com.ar/
+
+Se entra desde cualquier navegador, también del celular. Es la
+misma versión que la de esta carpeta.
+
+
+CÓMO SE USA SIN INTERNET
+------------------------
 Descomprimí la carpeta entera y hacé doble clic en index.html.
 Se abre en el navegador y listo.
 
@@ -39,7 +47,7 @@ QUÉ TIENE
 
 · Elegís cuántas preguntas: 10, 20, 30, 50, 100 o todas.
 
-· 47 preguntas traen un esquema dibujado: circuitos serie,
+· 36 preguntas traen un esquema dibujado: circuitos serie,
   paralelo y mixtos, fasores, ondas, sistema trifásico,
   triángulo de potencias e impedancias, vectores y
   transformadores.
@@ -127,6 +135,11 @@ texto. Cada pregunta es un bloque con este formato:
               "opciones", empezando a contar desde 0. La app
               baraja las opciones igual, así que el orden en el
               archivo no delata nada.
+  opciones    la correcta no puede ser la más larga de forma
+              sistemática, o se adivina sin saber el tema. La
+              justificación va en "explicacion", no pegada a la
+              opción, y los distractores se redactan con la misma
+              estructura y un largo parecido.
   tipo        "teoria" o "calculo" (las de cálculo llevan un
               chip naranja en pantalla).
   dificultad  "facil", "medio" o "dificil", sin acentos.
@@ -172,9 +185,15 @@ diagramas.js. En resumen:
                  adelanta), u, i, nota
   ondas          desfasaje (grados), a, b, ciclos, nota
   onda           periodo, amplitud
-  trifasica      nota
-  vector         x, y, etiqueta, rango
+  trifasica      etiquetas: ["R","S","T"], leyenda: false, nota
+  vector         x, y, etiqueta, rango, componentes, grilla
   transformador  up, us, np, ns
+
+Ojo con una regla: el esquema no puede contener la respuesta. Si
+la pregunta es "¿cómo se llaman las tres fases?", el dibujo va
+con leyenda: false; si es sobre el desfasaje, no lleva fasores
+dibujados en ese ángulo. Cuando el dibujo es el que contesta, la
+pregunta va sin dibujo.
 
 Los dibujos usan los colores del tema, así que se ven bien
 tanto en claro como en oscuro. Si te equivocás en el nombre de
