@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen de Capacitación Eléctrica — EPE</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- ══════════════ PANTALLA DE INICIO ══════════════ -->
+<main id="pantalla-inicio" class="pantalla activa">
+  <div class="contenedor">
+
+    <header class="cabecera">
+      <div class="marca">Energía de Santa Fe · Capacitación</div>
+      <h1>Examen de Capacitación Eléctrica</h1>
+      <p class="subtitulo">
+        Autoevaluación sobre los Módulos 1 y 2 del curso.
+        <strong id="total-banco">210</strong> preguntas de opción múltiple con corrección automática,
+        explicación y referencia al material de estudio.
+      </p>
+    </header>
+
+    <section class="config">
+
+      <div class="campo">
+        <h2 class="campo-titulo">1 · ¿Qué contenido querés rendir?</h2>
+        <div class="opciones-grid" id="sel-modulo">
+          <label class="tarjeta">
+            <input type="radio" name="modulo" value="1">
+            <span class="tarjeta-cuerpo">
+              <span class="tarjeta-titulo">Módulo 1</span>
+              <span class="tarjeta-desc">Conceptos eléctricos, circuitos, mediciones, clasificación de tensiones y métodos de trabajo.</span>
+              <span class="tarjeta-meta" data-cuenta="1"></span>
+            </span>
+          </label>
+          <label class="tarjeta">
+            <input type="radio" name="modulo" value="2">
+            <span class="tarjeta-cuerpo">
+              <span class="tarjeta-titulo">Módulo 2</span>
+              <span class="tarjeta-desc">Magnetismo, electromagnetismo, corriente alterna, factor de potencia y vectores.</span>
+              <span class="tarjeta-meta" data-cuenta="2"></span>
+            </span>
+          </label>
+          <label class="tarjeta">
+            <input type="radio" name="modulo" value="todos" checked>
+            <span class="tarjeta-cuerpo">
+              <span class="tarjeta-titulo">Integrador</span>
+              <span class="tarjeta-desc">Preguntas mezcladas de los dos módulos. Es el examen completo.</span>
+              <span class="tarjeta-meta" data-cuenta="todos"></span>
+            </span>
+          </label>
+          <label class="tarjeta tarjeta-erradas" id="tarjeta-erradas">
+            <input type="radio" name="modulo" value="erradas">
+            <span class="tarjeta-cuerpo">
+              <span class="tarjeta-titulo">Repasar mis erradas</span>
+              <span class="tarjeta-desc">Solo las preguntas que fallaste en intentos anteriores. Cada una sale de la lista cuando la respondés bien.</span>
+              <span class="tarjeta-meta" id="meta-erradas"></span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <h2 class="campo-titulo">2 · ¿Con qué nivel de dificultad?</h2>
+        <div class="pastillas" id="sel-dificultad" role="group" aria-label="Nivel de dificultad"></div>
+        <p class="ayuda">
+          <strong>Fácil:</strong> definiciones y datos directos. ·
+          <strong>Medio:</strong> aplicar un concepto o resolver un cálculo de un paso. ·
+          <strong>Difícil:</strong> varios pasos encadenados, distinciones finas y casos borde.
+        </p>
+      </div>
+
+      <div class="campo">
+        <h2 class="campo-titulo">3 · ¿Cómo querés que se corrija?</h2>
+        <div class="opciones-grid dos">
+          <label class="tarjeta">
+            <input type="radio" name="modo" value="practica" checked>
+            <span class="tarjeta-cuerpo">
+              <span class="tarjeta-titulo">Práctica</span>
+              <span class="tarjeta-desc">Te dice si acertaste apenas respondés y te muestra la explicación. Para estudiar.</span>
+            </span>
+          </label>
+          <label class="tarjeta">
+            <input type="radio" name="modo" value="examen">
+            <span class="tarjeta-cuerpo">
+              <span class="tarjeta-titulo">Examen</span>
+              <span class="tarjeta-desc">Respondés todo de corrido, con tiempo límite, y ves el resultado al final.</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <h2 class="campo-titulo">4 · ¿Cuántas preguntas?</h2>
+        <div class="pastillas" id="sel-cantidad" role="group" aria-label="Cantidad de preguntas"></div>
+        <p class="ayuda" id="ayuda-cantidad">
+          Se eligen al azar del banco y se reparten entre los temas. El orden de las preguntas y de las opciones cambia en cada intento.
+        </p>
+      </div>
+
+      <div class="acciones-inicio">
+        <button id="btn-comenzar" class="btn btn-primario btn-grande">Comenzar</button>
+        <span id="aviso-inicio" class="aviso-inicio"></span>
+      </div>
+
+    </section>
+
+    <section id="historial" class="historial" hidden>
+      <h2 class="campo-titulo">Intentos anteriores</h2>
+      <ul id="lista-historial" class="lista-historial"></ul>
+      <button id="btn-borrar-historial" class="btn btn-texto">Borrar historial y erradas</button>
+    </section>
+
+  </div>
+</main>
+
+
+<!-- ══════════════ PANTALLA DE EXAMEN ══════════════ -->
+<main id="pantalla-examen" class="pantalla">
+
+  <div class="barra-superior">
+    <div class="contenedor barra-superior-int">
+      <button id="btn-salir" class="btn btn-texto btn-salir" title="Abandonar el intento">← Salir</button>
+      <div class="progreso-info">
+        <span id="contador">Pregunta 1 de 30</span>
+        <span id="etiqueta-modo" class="chip">Práctica</span>
+      </div>
+      <div id="cronometro" class="cronometro" hidden>--:--</div>
+    </div>
+    <div class="barra-progreso"><div id="progreso-relleno"></div></div>
+  </div>
+
+  <div class="contenedor contenedor-examen">
+
+    <article class="pregunta-card">
+      <div class="pregunta-meta">
+        <span class="chip chip-modulo" id="chip-modulo">Módulo 1</span>
+        <span class="chip chip-tema" id="chip-tema">Conceptos eléctricos</span>
+        <span class="chip chip-dificultad" id="chip-dificultad">Medio</span>
+        <span class="chip chip-tipo" id="chip-tipo" hidden>Cálculo</span>
+        <button type="button" id="btn-marcar" class="btn-marcar" title="Marcar para revisar (tecla M)">
+          <span aria-hidden="true">⚑</span><span id="marcar-texto">Marcar</span>
+        </button>
+      </div>
+      <h2 class="enunciado" id="enunciado"></h2>
+      <div class="diagrama" id="diagrama" hidden></div>
+      <div class="opciones" id="opciones"></div>
+      <div class="feedback" id="feedback" hidden></div>
+    </article>
+
+    <nav class="navegacion">
+      <button id="btn-anterior" class="btn btn-secundario">Anterior</button>
+      <span id="aviso-nav" class="aviso-nav"></span>
+      <button id="btn-siguiente" class="btn btn-primario">Siguiente</button>
+    </nav>
+
+    <section class="mapa">
+      <button type="button" id="btn-mapa" class="btn btn-mapa" aria-expanded="false" aria-controls="mapa-grilla">
+        <span id="mapa-resumen">Mapa de preguntas</span>
+        <span class="mapa-flecha" aria-hidden="true">▾</span>
+      </button>
+      <div id="mapa-grilla" class="mapa-grilla" hidden></div>
+    </section>
+
+  </div>
+</main>
+
+
+<!-- ══════════════ PANTALLA DE RESULTADO ══════════════ -->
+<main id="pantalla-resultado" class="pantalla">
+  <div class="contenedor">
+
+    <section class="resultado-hero">
+      <div class="marcador">
+        <svg viewBox="0 0 120 120" class="anillo" aria-hidden="true">
+          <circle cx="60" cy="60" r="52" class="anillo-fondo"/>
+          <circle cx="60" cy="60" r="52" class="anillo-valor" id="anillo-valor"/>
+        </svg>
+        <div class="marcador-texto">
+          <span id="porcentaje">0%</span>
+          <small id="fraccion">0 de 0</small>
+        </div>
+      </div>
+      <div class="resultado-detalle">
+        <h1 id="titulo-resultado">Resultado</h1>
+        <p id="mensaje-resultado" class="subtitulo"></p>
+        <dl class="datos-resultado">
+          <div><dt>Modo</dt><dd id="res-modo">—</dd></div>
+          <div><dt>Contenido</dt><dd id="res-modulo">—</dd></div>
+          <div><dt>Nivel</dt><dd id="res-dificultad">—</dd></div>
+          <div><dt>Tiempo</dt><dd id="res-tiempo">—</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="bloque">
+      <h2 class="campo-titulo">Desempeño por tema</h2>
+      <div id="desglose" class="desglose"></div>
+    </section>
+
+    <section class="bloque" id="bloque-dificultad">
+      <h2 class="campo-titulo">Desempeño por dificultad</h2>
+      <div id="desglose-dificultad" class="desglose"></div>
+    </section>
+
+    <section class="bloque">
+      <div class="bloque-cabecera">
+        <h2 class="campo-titulo">Revisión de las preguntas</h2>
+        <div class="filtros" id="filtros-revision">
+          <button class="btn btn-filtro activo" data-filtro="todas">Todas</button>
+          <button class="btn btn-filtro" data-filtro="erradas">Solo las erradas</button>
+          <button class="btn btn-filtro" data-filtro="marcadas">Marcadas</button>
+        </div>
+      </div>
+      <div id="revision" class="revision"></div>
+    </section>
+
+    <div class="acciones-resultado">
+      <button id="btn-reintentar" class="btn btn-primario btn-grande">Nuevo intento</button>
+      <button id="btn-inicio" class="btn btn-secundario btn-grande">Volver al inicio</button>
+    </div>
+
+  </div>
+</main>
+
+<!-- ══════════════ PANEL DEL MATERIAL ══════════════
+     Se abre al hacer clic en la referencia de una pregunta y
+     muestra la captura de la página del PDF donde está la
+     respuesta. -->
+<aside id="panel" class="panel" hidden aria-labelledby="panel-titulo">
+  <header class="panel-cab">
+    <div class="panel-tit">
+      <span id="panel-titulo" class="panel-modulo">Módulo 1</span>
+      <span id="panel-paginas" class="panel-subt">pág. 5</span>
+    </div>
+    <button type="button" id="panel-cerrar" class="panel-cerrar" title="Cerrar (Esc)" aria-label="Cerrar">✕</button>
+  </header>
+  <div class="panel-barra">
+    <button type="button" id="panel-antes" class="btn-pag">▲ pág. anterior</button>
+    <span id="panel-seccion" class="panel-seccion"></span>
+    <button type="button" id="panel-despues" class="btn-pag">pág. siguiente ▼</button>
+  </div>
+  <div id="panel-hojas" class="panel-hojas"></div>
+</aside>
+<div id="panel-fondo" class="panel-fondo" hidden></div>
+
+<script src="diagramas.js"></script>
+<script src="preguntas-m1.js"></script>
+<script src="preguntas-m2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+EXAMEN DE CAPACITACIÓN ELÉCTRICA — EPE
+Módulos 1 y 2 · 210 preguntas de opción múltiple
+
+
+CÓMO SE USA
+-----------
+Descomprimí la carpeta entera y hacé doble clic en index.html.
+Se abre en el navegador y listo.
+
+No necesita internet, ni servidor, ni instalar nada. Funciona
+en cualquier PC con un navegador moderno (Chrome, Edge, Firefox).
+
+IMPORTANTE: los archivos tienen que quedar juntos en la misma
+carpeta. Si movés solo index.html, no va a funcionar.
+
+
+QUÉ TIENE
+---------
+· Elegís Módulo 1, Módulo 2 o Integrador (los dos mezclados).
+
+· Nivel de dificultad: Todas, Fácil, Medio o Difícil.
+     Fácil   — definiciones y datos directos.
+     Medio   — aplicar un concepto o resolver un cálculo de un paso.
+     Difícil — varios pasos encadenados, distinciones finas y
+               casos borde.
+  Abajo del botón Comenzar siempre dice cuántas preguntas
+  quedan con lo que elegiste.
+
+· Repasar mis erradas: junta las preguntas que fallaste en
+  intentos anteriores y arma una tanda solo con esas. Cada
+  pregunta sale de la lista cuando la respondés bien.
+
+· Dos formas de corregir:
+     Práctica — te corrige apenas respondés y te muestra la
+                explicación. Para estudiar.
+     Examen   — respondés todo de corrido con tiempo límite
+                (90 segundos por pregunta) y ves el resultado
+                al final.
+
+· Elegís cuántas preguntas: 10, 20, 30, 50, 100 o todas.
+
+· 47 preguntas traen un esquema dibujado: circuitos serie,
+  paralelo y mixtos, fasores, ondas, sistema trifásico,
+  triángulo de potencias e impedancias, vectores y
+  transformadores.
+
+· Mapa de preguntas: abajo de todo hay una grilla con todas
+  las preguntas del intento. Sirve para saltar a cualquiera y
+  para ver de un vistazo cuáles faltan. Los colores son:
+     gris   — sin responder
+     azul   — respondida (en modo Examen)
+     verde  — acertada (en modo Práctica)
+     rojo   — errada (en modo Práctica)
+     esquina naranja — marcada para revisar
+     anillo azul     — la que estás viendo
+
+· Marcar para revisar: el botón ⚑ de arriba a la derecha de
+  cada pregunta la deja marcada para volver antes de entregar.
+  Al finalizar te avisa si quedan marcadas, y en la revisión
+  podés filtrar solo esas.
+
+· Las preguntas y las opciones se barajan en cada intento, así
+  que no se memoriza el orden.
+
+· Ver la página del material: abajo de cada explicación está
+  la referencia ("Ver en el material: Módulo 1, pág. 13 …").
+  Haciendo clic se abre a la derecha la captura de esa página
+  del PDF, con la pregunta y la explicación siempre a la vista.
+  Si la referencia menciona dos páginas, se muestran las dos,
+  una debajo de la otra.
+     · "pág. anterior" y "pág. siguiente" agregan las hojas
+       de al lado, por si hace falta más contexto.
+     · Haciendo clic en la imagen se abre en tamaño completo
+       en otra pestaña.
+     · Se cierra con la X, con la tecla Esc, o haciendo clic
+       afuera.
+
+· Al terminar: puntaje, desempeño tema por tema, desempeño por
+  dificultad, y revisión pregunta por pregunta con la
+  explicación y la página exacta del PDF donde verificarlo.
+  La referencia también es clickeable acá.
+
+· Guarda los últimos 8 intentos y la lista de erradas en el
+  navegador de cada máquina.
+
+Atajos de teclado durante el examen:
+     1 2 3 4     elegir opción
+     Enter o →   siguiente
+     ←           anterior
+     M           marcar / desmarcar la pregunta
+
+
+LOS ARCHIVOS
+------------
+index.html         la página
+estilos.css        los estilos
+app.js             la lógica del examen
+diagramas.js       dibuja los esquemas de las preguntas
+preguntas-m1.js    banco del Módulo 1 (92 preguntas)
+preguntas-m2.js    banco del Módulo 2 (118 preguntas)
+paginas/           las 100 hojas de los dos PDF, en imagen
+                   (m1-01.webp … m1-47.webp y m2-01.webp …
+                   m2-53.webp). Es lo que muestra el panel
+                   lateral. Si borrás esta carpeta el examen
+                   sigue funcionando igual, solo que al tocar
+                   una referencia avisa que no la encuentra.
+
+
+PARA AGREGAR O CORREGIR PREGUNTAS
+---------------------------------
+Abrí preguntas-m1.js o preguntas-m2.js con cualquier editor de
+texto. Cada pregunta es un bloque con este formato:
+
+  {
+    modulo: 1,
+    tema: "Conceptos eléctricos",
+    tipo: "teoria",
+    dificultad: "medio",
+    pregunta: "...",
+    opciones: ["...", "...", "...", "..."],
+    correcta: 0,
+    explicacion: "...",
+    referencia: "Módulo 1, pág. 5 del PDF · Modelo atómico"
+  },
+
+  correcta    es la posición de la respuesta correcta dentro de
+              "opciones", empezando a contar desde 0. La app
+              baraja las opciones igual, así que el orden en el
+              archivo no delata nada.
+  tipo        "teoria" o "calculo" (las de cálculo llevan un
+              chip naranja en pantalla).
+  dificultad  "facil", "medio" o "dificil", sin acentos.
+  referencia  de acá sale el panel lateral, así que conviene
+              respetar la forma:
+                  "Módulo 1, pág. 5 del PDF · Sección"
+                  "Módulo 1, págs. 7 y 8 del PDF · Sección"
+                  "Módulo 2, págs. 11 a 14 del PDF · Sección"
+              Si el texto no tiene esa forma, la pregunta anda
+              igual: la referencia se muestra como texto suelto,
+              sin botón.
+  tema        agrupa el desglose del resultado. Si inventás un
+              tema nuevo, aparece solo.
+
+Copiá un bloque, editalo, y guardá el archivo. La app toma sola
+el total, los temas y los niveles; no hay que tocar nada más.
+
+Ojo con un detalle: guardá siempre en codificación UTF-8, o los
+acentos y las eñes se van a ver mal.
+
+Si reescribís el texto de una pregunta que alguien ya había
+fallado, esa pregunta sale de su lista de erradas. Es porque la
+app las identifica por el enunciado. No tiene más consecuencia
+que esa.
+
+
+PARA AGREGARLE UN ESQUEMA A UNA PREGUNTA
+----------------------------------------
+No hay que dibujar nada a mano. Se agrega una línea más al
+bloque de la pregunta describiendo el dibujo:
+
+    diagrama: { tipo: "serie", r: ["5 Ω", "10 Ω"], u: "15 V" },
+
+Los tipos disponibles y sus opciones están explicados dentro de
+diagramas.js. En resumen:
+
+  serie          r: [etiquetas...], u: "tensión"
+  paralelo       r: [etiquetas...], u: "tensión"
+  mixto          r1, r2, r3, r4, u
+  triangulo      horizontal, vertical, hipotenusa, angulo,
+                 sentido: "arriba" (por defecto) o "abajo"
+  fasores        angulo (grados, positivo = la corriente
+                 adelanta), u, i, nota
+  ondas          desfasaje (grados), a, b, ciclos, nota
+  onda           periodo, amplitud
+  trifasica      nota
+  vector         x, y, etiqueta, rango
+  transformador  up, us, np, ns
+
+Los dibujos usan los colores del tema, así que se ven bien
+tanto en claro como en oscuro. Si te equivocás en el nombre de
+un tipo, la pregunta se muestra igual, sin el dibujo.
