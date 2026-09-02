@@ -48,10 +48,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "facil",
   pregunta: "Se dice que un átomo es \"eléctricamente neutro\" cuando…",
   opciones: [
-    "tiene la misma cantidad de protones que de electrones, por lo que las cargas se anulan entre sí",
-    "no posee neutrones en su núcleo",
-    "tiene más electrones que protones",
-    "ha perdido su electrón de valencia"
+    "tiene la misma cantidad de protones que de electrones",
+    "no posee neutrones en su núcleo, por lo que nada desequilibra su carga",
+    "tiene más electrones que protones, y ese exceso se compensa con los neutrones",
+    "ha perdido su electrón de valencia y ya no puede ceder ni recibir carga"
   ],
   correcta: 0,
   explicacion: "Si se suman las cargas de todos los protones (positivas) y todos los electrones (negativas), el resultado da cero porque hay la misma cantidad de unas que de otras. Un átomo se considera equilibrado cuando tiene la misma cantidad de protones que de electrones.",
@@ -90,10 +90,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cuáles de estas son fuentes de fuerza electromotriz mencionadas en el módulo?",
   opciones: [
-    "Pilas y baterías (medios químicos), generadores (medios magnéticos), generadores solares y eólicos",
-    "Únicamente las pilas y las baterías",
-    "Únicamente los generadores rotativos",
-    "Los aisladores y los conductores"
+    "Pilas y baterías, generadores rotativos, y generadores solares y eólicos",
+    "Únicamente las pilas y las baterías, que son las que aportan carga química",
+    "Únicamente los generadores rotativos accionados por una turbina de vapor",
+    "Los aisladores y los conductores, según el material con el que se fabriquen"
   ],
   correcta: 0,
   explicacion: "El módulo enumera seis fuentes de F.E.M. capaces de separar los electrones de los núcleos: por medios químicos (pilas, baterías), por medios magnéticos (generadores), y también generadores solares y eólicos. Según su generación pueden dar corriente continua o alterna.",
@@ -104,10 +104,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Por qué los metales son los mejores conductores de la corriente eléctrica?",
   opciones: [
-    "Porque ceden con más facilidad que otros materiales los electrones que giran en la última capa de sus átomos",
-    "Porque tienen mayor cantidad de neutrones en el núcleo",
-    "Porque su resistividad es más alta que la de otros materiales",
-    "Porque carecen de electrones de valencia"
+    "Porque ceden con facilidad los electrones de la última capa de sus átomos",
+    "Porque tienen mayor cantidad de neutrones en el núcleo que otros materiales",
+    "Porque su resistividad es más alta que la del resto de los materiales",
+    "Porque carecen por completo de electrones de valencia en su última capa"
   ],
   correcta: 0,
   explicacion: "Los metales ceden más fácilmente que otros materiales los electrones de la última capa de sus átomos, y por eso las cargas se mueven con facilidad a través de ellos.",
@@ -146,10 +146,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Qué tipos de conductores utiliza la EPE según el módulo?",
   opciones: [
-    "Aéreos de aluminio (desnudos, protegidos o aislados) y subterráneos de aluminio y cobre, siempre aislados",
-    "Únicamente conductores aéreos desnudos de cobre",
-    "Únicamente conductores subterráneos de aluminio",
-    "Aéreos de cobre desnudo y subterráneos de acero aislado"
+    "Aéreos de aluminio, desnudos o aislados, y subterráneos de aluminio y cobre",
+    "Únicamente conductores aéreos desnudos de cobre, por su menor resistividad",
+    "Únicamente conductores subterráneos de aluminio con aislación de papel",
+    "Aéreos de cobre desnudo y subterráneos de acero aislado con polietileno"
   ],
   correcta: 0,
   explicacion: "Los aéreos son de aluminio y pueden ser desnudos, protegidos o aislados. Los subterráneos son de aluminio y cobre, y siempre aislados.",
@@ -174,10 +174,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué le ocurre a un material aislante si se le aplica una tensión suficientemente elevada?",
   opciones: [
-    "La fuerza es tan grande que los electrones son arrancados de sus átomos, el aislante se rompe y aparece conducción",
-    "Su resistencia aumenta hasta hacerse infinita",
-    "Se convierte de forma permanente en un conductor mejor que el cobre",
-    "No ocurre nada: un aislante nunca conduce, cualquiera sea la tensión"
+    "Se rompe: los electrones son arrancados de sus átomos y aparece conducción",
+    "Su resistencia aumenta hasta hacerse infinita y bloquea por completo el paso",
+    "Se convierte de forma permanente en un conductor mejor que el cobre recocido",
+    "No ocurre absolutamente nada: un aislante nunca conduce, sea cual sea la tensión"
   ],
   correcta: 0,
   explicacion: "Los aislantes oponen total resistencia al paso de la corriente, pero cuando se les aplica un voltaje suficientemente elevado los electrones son literalmente arrancados de sus átomos, el aislante se rompe y hay conducción. Por eso la aislación depende directamente del nivel de tensión.",
@@ -202,10 +202,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "dificil",
   pregunta: "Respecto de los aislantes gaseosos, ¿qué afirmación es correcta?",
   opciones: [
-    "Su rigidez dieléctrica crece a medida que aumenta la presión, y el SF6 es mejor aislante que el aire",
-    "Su rigidez dieléctrica disminuye a medida que aumenta la presión",
-    "Tienen resistividad muy baja y grandes pérdidas dieléctricas",
-    "El aire es mejor aislante que el SF6"
+    "Su rigidez dieléctrica crece con la presión, y el SF6 aísla mejor que el aire",
+    "Su rigidez dieléctrica disminuye a medida que aumenta la presión del gas",
+    "Tienen resistividad muy baja y grandes pérdidas dieléctricas por ionización",
+    "El aire es mejor aislante que el SF6 a cualquier presión de trabajo"
   ],
   correcta: 0,
   explicacion: "El aire y otros gases tienen elevadísima resistividad y están prácticamente exentos de pérdidas dieléctricas; su rigidez dieléctrica crece al aumentar la presión. El SF6, difundido desde los años 70, es mejor aislante que el aire.",
@@ -216,10 +216,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "facil",
   pregunta: "En las redes eléctricas, ¿cuáles son las dos funciones fundamentales que cumplen los aisladores?",
   opciones: [
-    "Aislar eléctricamente los conductores entre sí y aislarlos respecto a tierra o a una masa metálica",
-    "Conducir la corriente de fuga y disipar el calor del conductor",
-    "Elevar la tensión de la línea y reducir la corriente que circula",
-    "Sostener mecánicamente el conductor y medir su temperatura"
+    "Aislar los conductores entre sí y aislarlos respecto de tierra",
+    "Conducir la corriente de fuga y disipar el calor que genera el conductor",
+    "Elevar la tensión de la línea y reducir la corriente que circula por ella",
+    "Sostener mecánicamente el conductor y medir su temperatura de trabajo"
   ],
   correcta: 0,
   explicacion: "Los aisladores permiten aislar eléctricamente los conductores entre sí, y a esos mismos conductores respecto a tierra o a una masa metálica (que puede estar actuando como soporte).",
@@ -244,9 +244,9 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿De qué depende la aislación de cualquier elemento de un circuito eléctrico?",
   opciones: [
-    "Exclusivamente de la tensión, por eso en media tensión no se pueden usar aislantes para baja tensión",
-    "Exclusivamente de la corriente que circula por el circuito",
-    "De la potencia total conectada al circuito",
+    "Exclusivamente de la tensión a la que va a trabajar el elemento",
+    "Exclusivamente de la corriente que circula por el circuito en régimen",
+    "De la potencia total conectada al circuito, expresada en kVA",
     "De la resistencia del conductor que se está aislando"
   ],
   correcta: 0,
@@ -272,10 +272,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "En un circuito eléctrico, ¿por qué se dice que un artefacto conectado actúa como una \"carga\"?",
   opciones: [
-    "Porque está extrayendo energía eléctrica del circuito para su funcionamiento, y representa una resistencia",
-    "Porque aporta energía eléctrica al circuito",
-    "Porque acumula electrones sin consumirlos",
-    "Porque aumenta la tensión disponible en el circuito"
+    "Porque extrae energía eléctrica del circuito y representa una resistencia",
+    "Porque aporta al circuito la energía que consumen los demás artefactos",
+    "Porque acumula electrones sin consumirlos y luego los devuelve a la fuente",
+    "Porque aumenta la tensión disponible en el resto del circuito"
   ],
   correcta: 0,
   explicacion: "Cuando un artefacto se conecta a una línea eléctrica actúa como \"carga\" en ese circuito porque está extrayendo energía eléctrica para su funcionamiento. Cualquier dispositivo conectado representa en sí una resistencia al paso de la corriente.",
@@ -300,10 +300,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "facil",
   pregunta: "La intensidad de la corriente eléctrica…",
   opciones: [
-    "se mide en Ampere [A], se simboliza con I y se mide con amperímetro, multímetro o pinza voltiamperométrica",
-    "se mide en Volt [V], se simboliza con U y se mide con voltímetro",
-    "se mide en Ohm [Ω], se simboliza con R y se mide con telurímetro",
-    "se mide en Watt-hora [Wh], se simboliza con E y se mide con un medidor de energía"
+    "se mide en Ampere [A], se simboliza con I y se mide con amperímetro o pinza",
+    "se mide en Volt [V], se simboliza con U y se mide con voltímetro o multímetro",
+    "se mide en Ohm [Ω], se simboliza con R y se mide con telurímetro o megóhmetro",
+    "se mide en Watt-hora [Wh], se simboliza con E y se mide con medidor de energía"
   ],
   correcta: 0,
   explicacion: "La corriente es el flujo de electrones que circula por un circuito, impulsado indefectiblemente por una tensión. Su unidad es el Ampere [A], se simboliza con la letra I y se mide con amperímetro, multímetro o pinza voltiamperométrica con el selector en ACA.",
@@ -314,10 +314,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuál de estas afirmaciones sobre la corriente eléctrica es correcta?",
   opciones: [
-    "Habrá corriente solo si el circuito está cerrado y existe tensión, pero puede haber tensión sin corriente",
-    "Puede haber corriente sin tensión si el circuito está cerrado",
-    "Si hay tensión, siempre hay corriente circulando",
-    "La corriente sigue circulando aunque el circuito esté abierto"
+    "Habrá corriente solo si el circuito está cerrado y existe tensión",
+    "Puede haber corriente sin tensión mientras el circuito esté cerrado",
+    "Si hay tensión aplicada, siempre hay corriente circulando por el circuito",
+    "La corriente sigue circulando aunque el circuito quede abierto"
   ],
   correcta: 0,
   explicacion: "La corriente necesita dos condiciones simultáneas: circuito cerrado y tensión que impulse los electrones. Al abrir un interruptor el flujo se interrumpe, aunque la tensión siga presente. Por eso puede haber tensión sin corriente, pero nunca corriente sin tensión.",
@@ -342,10 +342,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿De qué dos formas se manifiesta la corriente eléctrica?",
   opciones: [
-    "Como calor (efecto Joule) y como magnetismo (campo magnético alrededor del conductor)",
-    "Como calor y como luz, únicamente",
-    "Como magnetismo y como sonido",
-    "Como tensión y como resistencia"
+    "Como calor (efecto Joule) y como magnetismo (campo magnético)",
+    "Como calor por efecto Joule y como luz visible en el conductor",
+    "Como magnetismo y como sonido audible alrededor del conductor",
+    "Como tensión aplicada y como resistencia propia del material"
   ],
   correcta: 0,
   explicacion: "El calor se produce por la interacción de la corriente con la resistencia del receptor: es el efecto Joule. El magnetismo es el efecto físico presente en motores, transformadores y bobinas, y se debe al principio básico del electromagnetismo: si circula una corriente eléctrica se produce un campo magnético.",
@@ -370,10 +370,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Por qué el módulo afirma que no existen conductores ni aislantes perfectos?",
   opciones: [
-    "Porque todos los materiales, incluidos los mejores conductores, ofrecen alguna resistencia al paso de la corriente",
-    "Porque todos los materiales conducen igual de bien",
-    "Porque los aislantes conducen mejor que los conductores a baja tensión",
-    "Porque la resistencia de un conductor es siempre exactamente cero"
+    "Porque todos los materiales ofrecen alguna resistencia al paso de la corriente",
+    "Porque todos los materiales conducen prácticamente igual de bien",
+    "Porque los aislantes terminan conduciendo mejor que los conductores en baja tensión",
+    "Porque la resistencia de un buen conductor es siempre exactamente cero"
   ],
   correcta: 0,
   explicacion: "Todos los materiales y elementos conocidos ofrecen mayor o menor resistencia al paso de la corriente, incluyendo los mejores conductores. Un conductor en sí representa una resistencia: en la práctica todos tienen alguna resistencia inherente debido a las propiedades del material, y por eso se calientan al circular corriente.",
@@ -384,10 +384,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Conceptos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué se debe hacer para reducir la resistencia de un conductor?",
   opciones: [
-    "Aumentar el área de su sección transversal o elegir un material de menor resistividad",
-    "Aumentar su longitud",
-    "Reducir el área de su sección transversal",
-    "Elegir un material de mayor resistividad"
+    "Aumentar la sección transversal o elegir un material de menor resistividad",
+    "Aumentar su longitud, para que el camino de la corriente se reparta mejor",
+    "Reducir el área de su sección transversal para concentrar la corriente",
+    "Elegir un material de mayor resistividad y aumentar su temperatura"
   ],
   correcta: 0,
   explicacion: "En la fórmula R = ρ · L / S, la resistencia crece con la longitud y con la resistividad, y baja al aumentar la sección. Por eso, a mayor sección menor resistencia.",
@@ -713,10 +713,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Circuitos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "En un circuito en serie con resistencias de distinto valor, ¿en cuál se produce la mayor caída de tensión?",
   opciones: [
-    "En la de mayor resistencia, porque la corriente es la misma en todas y U = I · R",
-    "En la de menor resistencia",
-    "En todas por igual, porque están en serie",
-    "En la que está más cerca de la fuente"
+    "En la de mayor resistencia, porque la corriente es la misma en todas",
+    "En la de menor resistencia, porque ofrece menos oposición y deja pasar más",
+    "En todas por igual, porque están conectadas una a continuación de la otra",
+    "En la que está más cerca de la fuente de alimentación"
   ],
   correcta: 0,
   explicacion: "En serie la corriente es la misma para todas las resistencias. Como U = I · R, con I fija la caída de tensión es directamente proporcional a R: cuanto mayor la resistencia, mayor su caída. La suma de todas las caídas da la tensión total (2ª Ley de Kirchhoff).",
@@ -728,10 +728,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Circuitos eléctricos", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Por qué en un circuito en paralelo, si se quema una lámpara, las demás siguen funcionando?",
   opciones: [
-    "Porque cada una de las corrientes es independiente del resto, y todas reciben la misma tensión de la fuente",
-    "Porque la corriente es constante en todo el circuito",
-    "Porque la resistencia equivalente aumenta al quemarse una lámpara",
-    "Porque la tensión se reparte entre todas las lámparas"
+    "Porque cada corriente es independiente y todas reciben la misma tensión",
+    "Porque la corriente es constante y sigue siendo la misma en cada rama",
+    "Porque la resistencia equivalente aumenta y compensa la rama que falta",
+    "Porque la tensión se reparte en partes iguales entre todas las lámparas"
   ],
   correcta: 0,
   explicacion: "En paralelo las cargas son independientes entre sí: cada rama tiene su propia corriente y todas están sometidas a la misma tensión, la de la fuente de alimentación (U = constante).",
@@ -743,10 +743,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Circuitos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cómo se calcula la resistencia equivalente de un circuito en paralelo?",
   opciones: [
-    "La inversa de la resistencia equivalente es igual a la suma de las inversas de cada resistencia",
-    "Sumando directamente todas las resistencias",
-    "Restando la menor resistencia de la mayor",
-    "Multiplicando todas las resistencias entre sí"
+    "La inversa de la equivalente es la suma de las inversas de cada una",
+    "Sumando directamente todas las resistencias conectadas en las ramas",
+    "Restando la menor resistencia de la mayor de todas las ramas",
+    "Multiplicando entre sí todas las resistencias de cada rama"
   ],
   correcta: 0,
   explicacion: "1/Rt = 1/R1 + 1/R2 + … + 1/Rn. Sumar directamente corresponde al circuito serie (Rt = R1 + R2 + R3…).",
@@ -758,9 +758,9 @@ const BANCO_M1 = [
   modulo: 1, tema: "Circuitos eléctricos", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Por qué la resistencia equivalente de un circuito en paralelo siempre resulta menor que la más chica de las resistencias conectadas?",
   opciones: [
-    "Porque cada rama nueva agrega otro camino para la corriente, y más caminos significan menos oposición total",
-    "Porque las resistencias en paralelo se restan entre sí",
-    "Porque la tensión se reparte entre las ramas",
+    "Porque cada rama agrega otro camino, y más caminos es menos oposición",
+    "Porque las resistencias en paralelo se restan una de la otra",
+    "Porque la tensión se reparte entre las ramas y cada una recibe menos",
     "No es cierto: la equivalente siempre es mayor que la más grande"
   ],
   correcta: 0,
@@ -773,10 +773,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Circuitos eléctricos", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué es un circuito mixto?",
   opciones: [
-    "Un circuito que combina resistencias asociadas en serie con resistencias asociadas en paralelo",
+    "Un circuito que combina resistencias en serie con resistencias en paralelo",
     "Un circuito que combina corriente continua con corriente alterna",
-    "Un circuito con conductores de cobre y de aluminio a la vez",
-    "Un circuito con dos fuentes de alimentación distintas"
+    "Un circuito con conductores de cobre y de aluminio conectados a la vez",
+    "Un circuito alimentado por dos fuentes de alimentación distintas"
   ],
   correcta: 0,
   explicacion: "Se llama mixto al circuito que contiene resistencias asociadas en serie y resistencias asociadas en paralelo. Para hallar su resistencia equivalente primero hay que identificar cómo están interconectados los elementos, resolver esa porción, redibujar y repetir el procedimiento tantas veces como sea necesario.",
@@ -970,10 +970,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Mediciones eléctricas", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Quién produce la corriente alterna y qué forma de onda genera?",
   opciones: [
-    "Los alternadores, que por electromagnetismo e inducción producen una onda de tensión senoidal",
-    "Las pilas y baterías, que producen una onda cuadrada",
-    "Las dinamos, que producen una tensión constante",
-    "Los transformadores, que producen una onda triangular"
+    "Los alternadores, que por inducción producen una onda senoidal",
+    "Las pilas y baterías, que por reacción química producen una onda cuadrada",
+    "Las dinamos, que producen una tensión constante en el tiempo",
+    "Los transformadores, que producen una onda de forma triangular"
   ],
   correcta: 0,
   explicacion: "La corriente alterna es producida por los alternadores (generadores de corriente alterna) y es la que se genera en las centrales eléctricas. Gracias al electromagnetismo y la inducción electromagnética, el giro del alternador produce una onda de tensión senoidal o sinusoidal.",
@@ -984,10 +984,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Mediciones eléctricas", tipo: "teoria", dificultad: "medio",
   pregunta: "Para medir corriente con una pinza voltiamperométrica, ¿cómo se procede?",
   opciones: [
-    "Se coloca el selector en ACA y se abraza el conductor con la pinza, sin interrumpir el circuito; la medición es en serie",
-    "Se coloca el selector en ACV y se usan las puntas de prueba en paralelo al circuito",
+    "Se pone el selector en ACA y se abraza el conductor con la pinza",
+    "Se pone el selector en ACV y se usan las puntas en paralelo al circuito",
     "Se corta el conductor y se intercalan las puntas de prueba en el corte",
-    "Se abrazan todos los conductores del circuito a la vez con la pinza"
+    "Se abrazan a la vez todos los conductores del circuito con la pinza"
   ],
   correcta: 0,
   explicacion: "El selector va en ACA (Altern Courrent Ampere) y se abraza el conductor con la pinza; el gran valor del instrumento es que permite medir intensidades en conductores activos sin necesidad de interrumpir el circuito. La medición de corriente se realiza en serie al circuito.",
@@ -998,9 +998,9 @@ const BANCO_M1 = [
   modulo: 1, tema: "Mediciones eléctricas", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Cómo hace la pinza voltiamperométrica para medir la corriente sin tocar el conductor?",
   opciones: [
-    "Se abre la pinza para que el cable quede dentro del campo magnético que genera la corriente que circula por él",
+    "Se abre la pinza y el cable queda dentro del campo magnético que genera",
     "Mide la temperatura que el conductor alcanza por efecto Joule",
-    "Mide la caída de tensión entre los dos extremos de la pinza",
+    "Mide la caída de tensión que hay entre los dos extremos de la pinza",
     "Inyecta una corriente de prueba en el conductor y mide la respuesta"
   ],
   correcta: 0,
@@ -1068,10 +1068,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Mediciones eléctricas", tipo: "teoria", dificultad: "medio",
   pregunta: "Al seleccionar la escala de medición, ¿cuál es la regla que indica el módulo?",
   opciones: [
-    "Empezar siempre con una magnitud mayor a la que se estima medir, e ir bajando",
-    "Empezar siempre con la magnitud más chica e ir subiendo",
-    "Elegir directamente la escala exacta del valor esperado",
-    "La escala no influye: el instrumento se ajusta solo"
+    "Empezar con una magnitud mayor a la estimada e ir bajando",
+    "Empezar siempre con la magnitud más chica e ir subiendo de a poco",
+    "Elegir directamente la escala exacta del valor que se espera medir",
+    "La escala no influye: el instrumento se ajusta solo al medir"
   ],
   correcta: 0,
   explicacion: "Se selecciona la magnitud teniendo en cuenta los valores aproximados a medir, y siempre se empieza con una magnitud mayor. Si la escala resulta demasiado grande, el display muestra \"OL\" y recién ahí se baja a una escala menor. Arrancar por la escala mayor protege al instrumento.",
@@ -1096,7 +1096,7 @@ const BANCO_M1 = [
   modulo: 1, tema: "Mediciones eléctricas", tipo: "teoria", dificultad: "facil",
   pregunta: "Si en el selector del instrumento figura DCV, ¿qué se está por medir?",
   opciones: [
-    "Tensión en corriente continua (Direct Courrent Voltage)",
+    "Tensión en corriente continua",
     "Corriente en continua",
     "Tensión en corriente alterna",
     "Resistencia de aislación"
@@ -1110,10 +1110,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Mediciones eléctricas", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuál es la diferencia principal entre un multímetro y una pinza voltiamperométrica?",
   opciones: [
-    "El multímetro está pensado para medir voltaje y la pinza para medir corrientes sin desconectar cables, lo que la hace más segura y fácil de usar",
-    "El multímetro solo mide corriente y la pinza solo mide tensión",
-    "La pinza es un instrumento analógico y el multímetro siempre digital",
-    "El multímetro puede medir sin interrumpir el circuito y la pinza no"
+    "El multímetro mide voltaje y la pinza mide corriente sin desconectar cables",
+    "El multímetro solo mide corriente y la pinza solo mide tensión, nunca al revés",
+    "La pinza es siempre un instrumento analógico y el multímetro siempre digital",
+    "El multímetro mide sin interrumpir el circuito y la pinza no puede hacerlo"
   ],
   correcta: 0,
   explicacion: "El multímetro sirve principalmente para medir voltaje, con capacidades extras para corriente. La pinza hace lo contrario: mide corrientes muy bien pero no es tan potente para voltajes. Además, la pinza es más segura y fácil de usar porque no requiere desconectar cables, y cumple también todas las funciones de un multímetro.",
@@ -1156,10 +1156,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Clasificación de tensiones", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuál es la principal justificación para operar el sistema eléctrico con tensión trifásica, además de reducir pérdidas en la transmisión?",
   opciones: [
-    "Se gana en potencia: la potencia con tensión trifásica es tres veces mayor que la del mismo sistema en monofásica",
-    "Se necesita un solo conductor en lugar de tres",
-    "Permite eliminar por completo la necesidad de transformadores",
-    "Reduce la tensión a la mitad manteniendo la misma potencia"
+    "Se gana potencia: la trifásica entrega tres veces la de la monofásica",
+    "Se necesita un solo conductor en lugar de tres para el mismo servicio",
+    "Permite eliminar por completo la necesidad de usar transformadores",
+    "Reduce la tensión a la mitad manteniendo la misma potencia entregada"
   ],
   correcta: 0,
   explicacion: "P (tensión trifásica) = 3 × P (tensión monofásica). En el sistema eléctrico de potencia, desde la generación hasta la distribución, la operación se realiza con tensión trifásica.",
@@ -1170,9 +1170,9 @@ const BANCO_M1 = [
   modulo: 1, tema: "Clasificación de tensiones", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué determina que un cliente se alimente con tensión monofásica o trifásica?",
   opciones: [
-    "Las cargas que se tengan que alimentar: en general las viviendas son monofásicas y las industrias trifásicas",
-    "La distancia a la estación transformadora más cercana",
-    "El nivel de tensión de la red de transmisión",
+    "Las cargas que haya que alimentar en cada caso",
+    "La distancia hasta la estación transformadora más cercana",
+    "El nivel de tensión que tenga la red de transmisión",
     "La cantidad de medidores instalados en el domicilio"
   ],
   correcta: 0,
@@ -1185,9 +1185,9 @@ const BANCO_M1 = [
   pregunta: "Según sus características, ¿cómo se clasifican las tensiones?",
   opciones: [
     "Trifásicas (3 fases), bifásicas (2 fases) y monofásicas (1 fase)",
-    "Solo trifásicas y monofásicas",
-    "Continuas, alternas y mixtas",
-    "Simples, compuestas y equilibradas"
+    "Solo trifásicas y monofásicas: la bifásica no existe en la red",
+    "Continuas, alternas y mixtas, según su forma de onda",
+    "Simples, compuestas y equilibradas, según su conexión"
   ],
   correcta: 0,
   explicacion: "Según sus características pueden ser trifásicas (3 fases), bifásicas (2 fases) o monofásicas (1 fase). El módulo aclara que las líneas bifásicas se encuentran comúnmente en sistemas de distribución de energía en áreas rurales.",
@@ -1272,7 +1272,7 @@ const BANCO_M1 = [
   modulo: 1, tema: "Métodos de trabajo", tipo: "teoria", dificultad: "dificil",
   pregunta: "Un operario realiza la consignación en este orden: corte visible, bloquear y señalizar, poner a tierra y cortocircuitar, verificar ausencia de tensión, delimitar la zona. ¿Qué está mal?",
   opciones: [
-    "Puso a tierra antes de verificar la ausencia de tensión: si la línea siguiera con tensión, la puesta a tierra provocaría un cortocircuito franco",
+    "Puso a tierra antes de verificar la ausencia de tensión",
     "Nada: ese es el orden correcto de las 5 reglas de oro",
     "El corte visible debería ir después de bloquear y señalizar",
     "Delimitar la zona de trabajo debería ser el primer paso"
@@ -1286,10 +1286,10 @@ const BANCO_M1 = [
   modulo: 1, tema: "Métodos de trabajo", tipo: "teoria", dificultad: "dificil",
   pregunta: "En el método de trabajo A CONTACTO, ¿qué condiciones se aplican?",
   opciones: [
-    "Se trabaja con doble aislación como mínimo, distancia de seguridad 0 m + 2 niveles de aislación, y no se puede aplicar en alta tensión",
-    "Se trabaja sin ningún tipo de aislación, a la distancia que fije la tabla 1",
-    "Solo se aplica en alta tensión, con distancia de seguridad 0 m",
-    "Se trabaja únicamente con el circuito consignado y puesto a tierra"
+    "Doble aislación como mínimo, distancia 0 m, y no se aplica en alta tensión",
+    "Sin ningún tipo de aislación, respetando la distancia que fija la tabla 1",
+    "Solo se aplica en alta tensión, con distancia de seguridad de 0 m",
+    "Únicamente con el circuito consignado y puesto a tierra previamente"
   ],
   correcta: 0,
   explicacion: "El trabajo a contacto se realiza sobre elementos tensionados mediante el uso de doble aislación como mínimo, con distancia de seguridad 0 m + 2 NA (niveles de aislación). Se aplica en media tensión (33 / 13,2 kV) y baja tensión (380 / 220 V), pero NO en alta tensión (500 / 220 / 132 kV).",

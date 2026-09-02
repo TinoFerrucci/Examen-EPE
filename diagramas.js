@@ -288,13 +288,16 @@ const DIAGRAMAS = (function () {
     return envolver("0 0 570 232", s, 540, c.titulo || "Onda senoidal", id);
   };
 
-  /* trifasica · {}  Las tres fases desfasadas 120°.           */
+  /* trifasica · { etiquetas: ["R","S","T"], leyenda: false, nota }
+     Las tres fases desfasadas 120°. Las etiquetas se pueden cambiar
+     u ocultar cuando la pregunta trata justamente sobre su nombre.  */
   tipos.trifasica = function (c, id) {
     var x0 = 55, x1 = 520, yc = 128, amp = 58;
-    var fases = [["dg-grueso", "dg-fuerte", 0, "R"],
-                 ["dg-acento-l", "dg-acento", -120, "S"],
-                 ["dg-verde-l", "dg-verde", -240, "T"]];
-    var s = leyenda(x0, 18, fases.map(function (f) { return [f[0], f[1], f[3]]; }));
+    var etq = c.etiquetas || ["R", "S", "T"];
+    var fases = [["dg-grueso", "dg-fuerte", 0, etq[0]],
+                 ["dg-acento-l", "dg-acento", -120, etq[1]],
+                 ["dg-verde-l", "dg-verde", -240, etq[2]]];
+    var s = c.leyenda === false ? "" : leyenda(x0, 18, fases.map(function (f) { return [f[0], f[1], f[3]]; }));
     s += '<line class="dg-eje" marker-end="url(#' + id + ')" x1="' + (x0 - 20) +
          '" y1="' + yc + '" x2="' + (x1 + 20) + '" y2="' + yc + '"/>';
     s += linea(x0 - 5, 50, x0 - 5, 206, "dg-eje");
@@ -306,14 +309,16 @@ const DIAGRAMAS = (function () {
     return envolver("0 0 570 238", s, 540, c.titulo || "Sistema trifásico", id);
   };
 
-  /* vector · { x: 6, y: 4, etiqueta: "E = 6 + j4", rango: 7 }
+  /* vector · { x: 6, y: 4, etiqueta: "E = 6 + j4", rango: 7, grilla: false }
      Vector en el plano cartesiano, con grilla.                */
   tipos.vector = function (c, id) {
     var rango = c.rango || 7, celda = 128 / rango, ox = 150, oy = 150;
     var s = "", i;
-    for (i = -rango; i <= rango; i++) {
-      s += linea(ox - 132, oy + i * celda, ox + 132, oy + i * celda, "dg-grilla");
-      s += linea(ox + i * celda, oy - 132, ox + i * celda, oy + 132, "dg-grilla");
+    if (c.grilla !== false) {
+      for (i = -rango; i <= rango; i++) {
+        s += linea(ox - 132, oy + i * celda, ox + 132, oy + i * celda, "dg-grilla");
+        s += linea(ox + i * celda, oy - 132, ox + i * celda, oy + 132, "dg-grilla");
+      }
     }
     s += ejes(ox - 140, oy - 142, ox + 142, oy + 140, ox, oy, id);
     var px = ox + c.x * celda, py = oy - c.y * celda;

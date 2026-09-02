@@ -20,10 +20,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué es el magnetismo?",
   opciones: [
-    "Un fenómeno físico por el que los materiales ejercen fuerzas de atracción o repulsión sobre otros materiales",
-    "La propiedad de un material de conducir la corriente eléctrica",
-    "La oposición que ofrece un material al paso de la corriente",
-    "La capacidad de un material de acumular carga eléctrica"
+    "Un fenómeno por el que los materiales ejercen atracción o repulsión",
+    "La propiedad de un material de conducir bien la corriente eléctrica",
+    "La oposición que ofrece un material al paso de la corriente eléctrica",
+    "La capacidad de un material de acumular carga eléctrica en su superficie"
   ],
   correcta: 0,
   explicacion: "El magnetismo es un fenómeno físico por el que los materiales ejercen fuerzas de atracción o repulsión sobre otros materiales. Los elementos más comunes que se relacionan con él son los imanes.",
@@ -34,10 +34,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿De dónde proviene el nombre \"magnetismo\"?",
   opciones: [
-    "De Magnesia, la región al norte de Grecia donde en el siglo VI a.C. se descubrió la magnetita",
+    "De Magnesia, la región de Grecia donde se descubrió la magnetita",
     "Del apellido del físico que describió el fenómeno por primera vez",
     "Del latín magnus, por la gran fuerza que ejercen los imanes",
-    "Del nombre del mineral magnesio, con el que se fabrican los imanes"
+    "Del mineral magnesio, con el que se fabrican los imanes actuales"
   ],
   correcta: 0,
   explicacion: "La magnetita (óxido ferroso-diférrico) fue descubierta en el siglo VI a.C. al norte de Grecia, en Magnesia, y de allí proviene el nombre.",
@@ -62,10 +62,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué metales tiene la propiedad de atraer la magnetita?",
   opciones: [
-    "El hierro, el cobalto, el níquel y ciertas aleaciones de estos metales",
-    "El cobre, el aluminio y la plata",
-    "El oro, la plata y el platino",
-    "Todos los metales, sin excepción"
+    "El hierro, el cobalto, el níquel y algunas de sus aleaciones",
+    "El cobre, el aluminio y la plata, por su baja resistividad",
+    "El oro, la plata y el platino, por tratarse de metales nobles",
+    "Todos los metales, sin excepción, en mayor o menor medida"
   ],
   correcta: 0,
   explicacion: "La magnetita atrae al hierro, al cobalto, al níquel y a ciertas aleaciones de estos metales. Esa propiedad recibe el nombre de magnetismo.",
@@ -132,10 +132,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué son las LÍNEAS DE FUERZA?",
   opciones: [
-    "Líneas imaginarias que se trazan para explicar la actividad magnética de cada polo, ya que las fuerzas magnéticas son invisibles",
-    "Los conductores físicos que unen el polo norte con el polo sur de un imán",
+    "Líneas imaginarias que se trazan para explicar la actividad de cada polo",
+    "Los conductores físicos que unen el polo norte con el polo sur del imán",
     "Las trayectorias que siguen los electrones dentro del material del imán",
-    "Los límites físicos del material magnético"
+    "Los límites físicos del material con el que está construido el imán"
   ],
   correcta: 0,
   explicacion: "Las fuerzas que producen los polos magnéticos (y que forman el campo magnético) son invisibles. Por eso se trazan líneas imaginarias que explican la actividad magnética de cada polo: son las líneas de fuerza.",
@@ -188,10 +188,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuál es el ejemplo típico de imán TEMPORAL que da el módulo?",
   opciones: [
-    "El electroimán, que solo genera campo magnético mientras circula corriente por él",
-    "El imán de neodimio de un disco rígido",
-    "La magnetita",
-    "El imán de alnico de un parlante"
+    "El electroimán, que genera campo solo mientras circula corriente",
+    "El imán de neodimio que llevan los discos rígidos de una PC",
+    "La magnetita, el único imán natural que existe en la tierra",
+    "El imán de alnico que llevan los parlantes de un equipo de audio"
   ],
   correcta: 0,
   explicacion: "Los imanes temporales manifiestan sus propiedades durante un tiempo determinado. El electroimán es el ejemplo claro: solo genera campo magnético cuando por él circula corriente eléctrica, y al desaparecer esta también lo hace el campo.",
@@ -202,10 +202,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cuáles de estas son aplicaciones cotidianas de los imanes que menciona el módulo?",
   opciones: [
-    "El imán de un disco rígido, el de un parlante y los de la bobina de una guitarra eléctrica",
-    "Los aisladores de porcelana de las líneas de media tensión",
+    "El imán de un disco rígido, el de un parlante y el de una guitarra",
+    "Los aisladores de porcelana que sostienen las líneas de media tensión",
     "Las puntas de prueba de la pinza voltiamperométrica",
-    "Los conductores de aluminio con alma de acero"
+    "Los conductores de aluminio con alma de acero de las líneas aéreas"
   ],
   correcta: 0,
   explicacion: "El módulo ilustra las aplicaciones de los imanes con el imán perteneciente a un disco rígido de PC, el imán de un parlante y los imanes en la bobina de una guitarra eléctrica. También muestra el núcleo de un transformador trifásico como ejemplo de material permeable.",
@@ -230,10 +230,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué es la RELUCTANCIA magnética?",
   opciones: [
-    "Lo opuesto a la permeabilidad: la \"resistencia\" que opone el material a ser atravesado por las líneas de fuerza",
-    "Lo mismo que la permeabilidad, expresado en otras unidades",
-    "La fuerza con la que un imán atrae al hierro",
-    "La cantidad de líneas de fuerza que produce un imán"
+    "Lo opuesto a la permeabilidad: la oposición a ser atravesado",
+    "Lo mismo que la permeabilidad, solo que expresado en otras unidades",
+    "La fuerza con la que un imán atrae al hierro que tiene cerca",
+    "La cantidad de líneas de fuerza que es capaz de producir un imán"
   ],
   correcta: 0,
   explicacion: "La reluctancia es lo opuesto a la permeabilidad. Por eso, en la práctica se usan materiales de alta permeabilidad (baja reluctancia), como el hierro, para los núcleos de electroimanes y como \"caminos\" para guiar los campos magnéticos.",
@@ -258,9 +258,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "Un material tiene ALTA permeabilidad. ¿Qué se puede afirmar sobre su reluctancia y sobre su uso?",
   opciones: [
-    "Tiene baja reluctancia, y sirve como núcleo de electroimanes o como camino para guiar campos magnéticos",
-    "Tiene alta reluctancia, y sirve para bloquear los campos magnéticos",
-    "Tiene baja reluctancia, y por eso se usa como aislante eléctrico",
+    "Baja reluctancia; sirve como núcleo de electroimanes",
+    "Alta reluctancia; sirve para bloquear los campos magnéticos",
+    "Baja reluctancia; por eso se lo usa como aislante eléctrico",
     "Su reluctancia no guarda ninguna relación con su permeabilidad"
   ],
   correcta: 0,
@@ -272,10 +272,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Magnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "Comparando el hierro con el aire, ¿cuál es la afirmación correcta?",
   opciones: [
-    "El hierro tiene permeabilidad mucho mayor, así que a las líneas de fuerza les resulta más fácil atravesarlo",
-    "El aire tiene permeabilidad mucho mayor que el hierro",
-    "Ambos tienen la misma permeabilidad, porque los dos son no conductores del campo",
-    "El hierro tiene alta reluctancia, y por eso frena las líneas de fuerza"
+    "El hierro tiene mucha más permeabilidad: las líneas lo atraviesan mejor",
+    "El aire tiene mucha más permeabilidad que el hierro macizo",
+    "Ambos tienen la misma permeabilidad porque no conducen el campo",
+    "El hierro tiene alta reluctancia y por eso frena las líneas de fuerza"
   ],
   correcta: 0,
   explicacion: "Es sabido que el hierro tiene una permeabilidad mucho mayor que el aire. El aire, en cambio, tiene alta reluctancia y no le resulta fácil a las líneas de fuerza atravesarlo. Esa diferencia es la razón por la que a un solenoide con núcleo de aire se le coloca un núcleo de hierro.",
@@ -304,10 +304,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué descubrió Hans Christian Oersted en 1820?",
   opciones: [
-    "La relación entre el magnetismo y la corriente eléctrica que fluye por un conductor",
-    "La ley de la inducción electromagnética",
+    "La relación entre el magnetismo y la corriente eléctrica",
+    "La ley de la inducción electromagnética y sus aplicaciones",
     "Que los polos iguales se repelen y los opuestos se atraen",
-    "El principio de funcionamiento del transformador"
+    "El principio de funcionamiento del transformador moderno"
   ],
   correcta: 0,
   explicacion: "En 1820 el físico danés Oersted descubrió la relación entre el magnetismo y la corriente eléctrica. La ley de la inducción, en cambio, corresponde a los experimentos de Michael Faraday en 1831.",
@@ -346,10 +346,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué es un solenoide y para qué se lo utiliza?",
   opciones: [
-    "Un conductor recto arrollado una cierta cantidad de vueltas, con el que se consigue un campo magnético mucho más intenso que con el conductor recto",
-    "Un núcleo de hierro macizo que concentra las líneas de fuerza",
-    "Un imán permanente de forma cilíndrica",
-    "Un conductor recto de gran sección que reduce la resistencia del circuito"
+    "Un conductor arrollado en varias vueltas, que da un campo más intenso",
+    "Un núcleo de hierro macizo que concentra las líneas de fuerza del imán",
+    "Un imán permanente de forma cilíndrica y con polos en los extremos",
+    "Un conductor recto de gran sección, que reduce la resistencia"
   ],
   correcta: 0,
   explicacion: "El solenoide (o bobina) no es más que un conductor recto arrollado una cierta cantidad de vueltas. El efecto del campo magnético total es el del conductor rectilíneo multiplicado por la cantidad de vueltas, de modo que se consigue un campo mucho más intenso.",
@@ -360,10 +360,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuáles son las tres formas de intensificar el campo magnético de un conductor?",
   opciones: [
-    "Arrollarlo en espiras formando una bobina, aumentar la intensidad de corriente y colocar un núcleo de hierro dentro del solenoide",
-    "Aumentar la longitud del conductor, reducir su sección y enfriarlo",
-    "Alimentarlo con corriente continua, aumentar la tensión y aislarlo mejor",
-    "Colocar un núcleo de aire, reducir la corriente y disminuir el número de vueltas"
+    "Arrollarlo en bobina, aumentar la corriente y ponerle núcleo de hierro",
+    "Aumentar su longitud, reducir su sección y enfriarlo con aire forzado",
+    "Alimentarlo con continua, subir la tensión y mejorar su aislación",
+    "Ponerle núcleo de aire, bajar la corriente y usar menos vueltas"
   ],
   correcta: 0,
   explicacion: "Las tres formas son: (1) arrollar el conductor en espiras formando una bobina, ya que a mayor número de vueltas más intenso será el campo; (2) aumentar la intensidad de corriente, porque el electromagnetismo depende de ella; y (3) colocar un núcleo de hierro dentro del solenoide, porque el hierro tiene mayor permeabilidad que el aire.",
@@ -374,10 +374,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Por qué se coloca un núcleo de hierro dentro de una bobina en lugar de dejarla con núcleo de aire?",
   opciones: [
-    "Porque el hierro tiene permeabilidad altísima y baja reluctancia, por lo que las líneas de fuerza encuentran en él un mejor camino",
+    "Porque tiene permeabilidad altísima y baja reluctancia",
     "Porque el hierro conduce mejor la corriente eléctrica que el aire",
-    "Porque el hierro aísla eléctricamente los distintos arrollamientos entre sí",
-    "Porque el hierro tiene mayor reluctancia y así se concentra el campo"
+    "Porque el hierro aísla eléctricamente los arrollamientos entre sí",
+    "Porque el hierro tiene mayor reluctancia y así concentra el campo"
   ],
   correcta: 0,
   explicacion: "El aire tiene alta reluctancia y no le resulta fácil a las líneas de fuerza atravesarlo. Con un núcleo de hierro, de permeabilidad altísima, se obtienen dos ventajas: el mismo campo con mucha menos energía, o bien un campo más intenso para la misma energía puesta en juego.",
@@ -388,9 +388,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuál es la ventaja del electroimán frente a un imán permanente?",
   opciones: [
-    "Se puede encender, apagar o variar la intensidad de su campo variando la corriente eléctrica",
-    "Produce un campo magnético sin necesidad de energía",
-    "Sus polos norte y sur no se pueden invertir",
+    "Se puede encender, apagar o variar su campo con la corriente",
+    "Produce un campo magnético sin necesidad de consumir energía",
+    "Sus polos norte y sur no se pueden invertir de ninguna forma",
     "Conserva el campo magnético indefinidamente sin alimentación"
   ],
   correcta: 0,
@@ -416,10 +416,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿De qué factores depende la fuerza que mueve al conductor inmerso en un campo magnético?",
   opciones: [
-    "Es directamente proporcional a la intensidad del campo magnético B, a la corriente I y a la longitud efectiva L del conductor",
-    "Depende únicamente de la tensión aplicada al conductor",
-    "Es directamente proporcional a la longitud total del conductor, esté o no dentro del campo",
-    "Es inversamente proporcional a la corriente que circula"
+    "Es proporcional al campo B, a la corriente I y a la longitud L",
+    "Depende únicamente de la tensión que se aplica al conductor",
+    "Es proporcional a la longitud total, esté o no dentro del campo",
+    "Es inversamente proporcional a la corriente que circula por él"
   ],
   correcta: 0,
   explicacion: "La fuerza es directamente proporcional a B, a I y a la longitud efectiva L. Longitud efectiva significa solo la parte del conductor que está inmersa en el campo: si el conductor mide 5 m pero solo 1 m está dentro del campo, solo ese metro produce fuerza. También influye el ángulo con que el conductor corta el campo, que en este caso es 90°.",
@@ -430,9 +430,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "En una máquina eléctrica, ¿cómo se definen el rotor y el estator?",
   opciones: [
-    "El rotor es el conjunto de partes unidas al eje, que rotan; el estator son las piezas sostenidas por la carcaza, que quedan estáticas",
-    "El rotor son las piezas fijas y el estator las que giran",
-    "El rotor es el bobinado y el estator es el núcleo de hierro",
+    "El rotor son las partes unidas al eje; el estator, las que quedan fijas",
+    "El rotor son las piezas fijas y el estator las que giran con el eje",
+    "El rotor es el bobinado y el estator el núcleo de hierro laminado",
     "El rotor es la parte eléctrica y el estator la parte mecánica"
   ],
   correcta: 0,
@@ -444,7 +444,7 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "En un motor, ¿qué ocurre si se invierte SOLO uno de los dos parámetros (el sentido del campo magnético o el sentido de la corriente)?",
   opciones: [
-    "Se invierte el sentido del movimiento; si después se invierte también el otro, el movimiento vuelve al sentido original",
+    "Se invierte el sentido del movimiento",
     "El motor se detiene por completo",
     "El sentido del movimiento no cambia",
     "El motor duplica su velocidad de giro"
@@ -458,9 +458,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "En un motor de corriente continua, ¿cuál es la función del colector o conmutador?",
   opciones: [
-    "Invertir el sentido de circulación de la corriente para que el motor siga girando cuando el bobinado del rotor queda perpendicular al campo",
+    "Invertir el sentido de la corriente para que el motor siga girando",
     "Rectificar la corriente alterna de entrada y convertirla en continua",
-    "Transmitir el movimiento del rotor al eje de la máquina",
+    "Transmitir el movimiento del rotor al eje de salida de la máquina",
     "Refrigerar los bobinados del rotor durante el funcionamiento"
   ],
   correcta: 0,
@@ -472,10 +472,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Por qué los motores universales, muy similares a los de C.C., pueden funcionar con corriente alterna?",
   opciones: [
-    "Porque el campo del estator lo genera un electroimán alimentado por la misma fuente, así que al invertirse la corriente se invierten a la vez el campo y la corriente del rotor",
+    "Porque al invertirse la corriente se invierten a la vez campo y rotor",
     "Porque tienen un rectificador interno que convierte la alterna en continua",
     "Porque su rotor gira tan rápido que no alcanza a notar la inversión",
-    "Porque el campo del estator lo genera un imán permanente que no se ve afectado"
+    "Porque el campo del estator lo da un imán permanente que no se altera"
   ],
   correcta: 0,
   explicacion: "En los motores universales el campo magnético del estator es generado por un electroimán, no por un imán permanente. Cuando el sentido de la corriente se invierte (en alterna, de forma cíclica), no solo cambia la dirección de la corriente en el bobinado del rotor sino también el sentido del campo del estator, porque ambos están alimentados por la misma fuente. Al invertirse los DOS parámetros a la vez, el sentido del movimiento se mantiene.",
@@ -486,9 +486,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué demostraron los experimentos de Michael Faraday en 1831?",
   opciones: [
-    "Que es posible inducir una fuerza electromotriz en un circuito utilizando un campo magnético variable",
-    "Que alrededor de un conductor con corriente se genera un campo magnético",
-    "Que los polos iguales se repelen",
+    "Que se puede inducir una FEM con un campo magnético variable",
+    "Que alrededor de un conductor con corriente se genera un campo",
+    "Que los polos iguales se repelen y los distintos se atraen",
     "Que la corriente alterna se transporta mejor que la continua"
   ],
   correcta: 0,
@@ -500,10 +500,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿De qué factores depende la FEM inducida en un conductor que se mueve dentro de un campo magnético?",
   opciones: [
-    "De la intensidad del campo B, de la velocidad v con que se mueve el conductor y de su longitud efectiva L",
-    "Únicamente de la resistencia del conductor",
-    "De la corriente que se le inyecte previamente al conductor",
-    "Únicamente de la cantidad de vueltas del bobinado"
+    "Del campo B, de la velocidad v y de la longitud efectiva L",
+    "Únicamente de la resistencia eléctrica que tenga el conductor",
+    "De la corriente que se le haya inyectado antes al conductor",
+    "Únicamente de la cantidad de vueltas que tenga el bobinado"
   ],
   correcta: 0,
   explicacion: "La FEM inducida es directamente proporcional a la intensidad del campo magnético B, a la velocidad v con la que se mueve el conductor y a su longitud efectiva L. También tiene relación con el ángulo entre la dirección del movimiento y el campo magnético. Se mide en voltios.",
@@ -514,10 +514,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "Cuando se induce una FEM en un conductor, ¿qué hace falta para que circule corriente?",
   opciones: [
-    "Que se cierre el circuito conectando una carga; entonces aparece la llamada corriente inducida",
-    "Nada más: la corriente circula por el solo hecho de inducirse la FEM",
-    "Inyectar previamente corriente en el bobinado",
-    "Que el conductor esté quieto respecto del campo magnético"
+    "Que se cierre el circuito conectando una carga",
+    "Nada: la corriente circula por el solo hecho de inducirse la FEM",
+    "Inyectar previamente una corriente en el bobinado del conductor",
+    "Que el conductor quede quieto respecto del campo magnético"
   ],
   correcta: 0,
   explicacion: "Inducir una FEM implica que, si se cierra el circuito conectando una carga, aparecerá en el mismo una corriente que toma el nombre de corriente inducida. Es la misma regla general de la electricidad: hace falta tensión Y circuito cerrado.",
@@ -528,10 +528,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué condición debe cumplirse SIEMPRE para que se genere una fuerza electromotriz inducida (FEM)?",
   opciones: [
-    "Debe existir un movimiento relativo entre el campo magnético y el conductor, sin importar cuál queda fijo y cuál se mueve",
-    "El conductor debe moverse y el campo magnético debe permanecer fijo",
-    "El campo magnético debe moverse y el conductor debe permanecer fijo",
-    "Debe circular previamente una corriente por el conductor"
+    "Que haya movimiento relativo entre el campo y el conductor",
+    "Que el conductor se mueva y el campo magnético quede fijo",
+    "Que el campo magnético se mueva y el conductor quede fijo",
+    "Que circule previamente una corriente por el conductor"
   ],
   correcta: 0,
   explicacion: "Para que se genere una FEM tiene que haber siempre un movimiento relativo entre el campo magnético y el conductor, sin importar cuál queda fijo y cuál se mueve.",
@@ -542,10 +542,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Cuáles son las tres formas de generar una FEM que enumera el módulo?",
   opciones: [
-    "Mover el conductor en un campo estático; variar el campo en el espacio con el conductor fijo; variar el campo en el tiempo con el conductor fijo",
-    "Aumentar la corriente, aumentar las vueltas de la bobina y colocar un núcleo de hierro",
-    "Calentar el conductor, enfriarlo y someterlo a presión",
-    "Conectarlo a una pila, a una batería o a un generador"
+    "Mover el conductor en campo fijo; variar el campo en el espacio; y en el tiempo",
+    "Aumentar la corriente, aumentar las vueltas de la bobina y poner núcleo de hierro",
+    "Calentar el conductor, después enfriarlo y por último someterlo a presión",
+    "Conectarlo a una pila, a una batería o directamente a un generador"
   ],
   correcta: 0,
   explicacion: "Las tres formas son: (1) movimiento del conductor a través de un campo magnético estático, que es el caso de los generadores monofásicos de baja potencia; (2) variación en el espacio del campo con el conductor fijo, el caso de los generadores trifásicos de mayor potencia; y (3) variación en el tiempo del campo con el conductor fijo, el caso de los transformadores.",
@@ -556,10 +556,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Por qué en un generador trifásico de gran potencia las bobinas quedan fijas en el estator y los campos magnéticos giran con el rotor?",
   opciones: [
-    "Porque poner los 3 bobinados en el rotor obligaría a usar 4 anillos rozantes y a transmitir toda la potencia generada por los carbones",
+    "Porque ponerlas en el rotor obligaría a usar 4 anillos rozantes",
     "Porque de esa manera el rotor pesa más y gira con más inercia",
-    "Porque las bobinas fijas no necesitan aislación",
-    "Porque así se puede prescindir del neutro en la salida"
+    "Porque las bobinas fijas no necesitan ningún tipo de aislación",
+    "Porque así se puede prescindir del neutro en la salida del generador"
   ],
   correcta: 0,
   explicacion: "Generar trifásica requiere 3 bobinados, uno por fase. Si se colocaran en el rotor, la máquina debería poseer 4 anillos rozantes (3 fases y neutro), y además toda la potencia eléctrica generada tendría que ser transmitida por los carbones. Por eso se invierte el arreglo: bobinas fijas en el estator y campos giratorios en el rotor.",
@@ -570,9 +570,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "En un generador de corriente alterna, ¿por qué la tensión generada resulta alterna?",
   opciones: [
-    "Porque al girar el rotor el sentido de corte de las líneas de campo se va alternando: media rotación corta en una dirección y la otra media en la contraria",
-    "Porque el colector invierte la corriente dos veces por vuelta",
-    "Porque la fuente que alimenta el rotor es alterna",
+    "Porque al girar el rotor el sentido de corte de las líneas se alterna",
+    "Porque el colector invierte la corriente dos veces por cada vuelta",
+    "Porque la fuente que alimenta el rotor es de corriente alterna",
     "Porque los anillos rozantes invierten la polaridad en cada vuelta"
   ],
   correcta: 0,
@@ -584,10 +584,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "facil",
   pregunta: "En un transformador, ¿cuál es el único vínculo que existe entre el circuito primario y el secundario?",
   opciones: [
-    "El campo magnético, ya que ambos circuitos están eléctricamente aislados entre sí y del núcleo",
-    "Una conexión eléctrica directa a través del núcleo metálico",
-    "El aceite dieléctrico que rodea a los bobinados",
-    "La carcaza exterior del transformador"
+    "El campo magnético: los dos circuitos están aislados entre sí",
+    "Una conexión eléctrica directa que pasa por el núcleo metálico",
+    "El aceite dieléctrico que rodea y refrigera los dos bobinados",
+    "La carcaza exterior metálica que envuelve al transformador"
   ],
   correcta: 0,
   explicacion: "Los circuitos primario y secundario están eléctricamente aislados el uno del otro, y a su vez del núcleo y de toda parte metálica exterior. El único vínculo es el campo magnético: el primario lo crea, el núcleo lo guía y provoca un fenómeno de inducción en el secundario.",
@@ -599,10 +599,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "dificil",
   pregunta: "El módulo advierte, principalmente por cuestiones de seguridad, que todo transformador es REVERSIBLE. ¿Qué significa esto?",
   opciones: [
-    "Que puede funcionar como reductor o como elevador, y eso depende solo de cuál de sus bobinados se energice",
+    "Que puede funcionar como reductor o como elevador, según cuál se energice",
     "Que puede funcionar tanto con corriente alterna como con corriente continua",
-    "Que se le puede invertir la polaridad sin que cambie nada",
-    "Que el núcleo se puede desmontar y volver a montar en el otro sentido"
+    "Que se le puede invertir la polaridad sin que cambie absolutamente nada",
+    "Que el núcleo se puede desmontar y montar de nuevo en el otro sentido"
   ],
   correcta: 0,
   explicacion: "Que un transformador sea reversible significa que puede funcionar como reductor o como elevador, y solo depende de cuál de sus bobinados se energice (es decir, cuál se use como primario). Es un punto crítico al momento de trabajar sobre la máquina: alimentar por el lado de baja puede poner alta tensión en el otro bobinado.",
@@ -613,10 +613,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Electromagnetismo", tipo: "teoria", dificultad: "medio",
   pregunta: "¿De qué material se construye el núcleo de un transformador y por qué?",
   opciones: [
-    "De acero al silicio de grano orientado, porque debe tener altísima permeabilidad para que todo el campo del primario llegue al secundario",
-    "De cobre, porque es el mejor conductor eléctrico",
-    "De aluminio, porque es liviano y barato",
-    "De porcelana, porque debe aislar el primario del secundario"
+    "De acero al silicio de grano orientado, por su altísima permeabilidad",
+    "De cobre, porque es el metal que mejor conduce la electricidad",
+    "De aluminio, porque es liviano, barato y fácil de laminar",
+    "De porcelana, porque tiene que aislar el primario del secundario"
   ],
   correcta: 0,
   explicacion: "Dada la importancia, en cuanto a rendimiento, de que todo el campo magnético generado en el primario llegue al secundario, el núcleo debe ser de un material de altísima permeabilidad. En la práctica se utiliza acero al silicio de grano orientado. El núcleo guía el campo: no conduce corriente ni aísla.",
@@ -676,9 +676,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cuáles son las principales ventajas de la corriente alterna frente a la continua?",
   opciones: [
-    "Generadores y motores más baratos, eficientes y menos complejos; transformar la tensión de manera simple y barata; y transportar grandes cantidades de energía a larga distancia con mínima sección de conductores",
-    "Menor riesgo eléctrico para las personas y menor costo de aislación",
-    "Puede almacenarse fácilmente en baterías y pilas",
+    "Generadores más baratos, transformación simple y transporte a larga distancia",
+    "Menor riesgo eléctrico para las personas y menor costo de aislación en las líneas",
+    "Puede almacenarse fácilmente en baterías, pilas y acumuladores",
     "No produce calentamiento en los conductores por efecto Joule"
   ],
   correcta: 0,
@@ -690,10 +690,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Por qué la forma de onda de la corriente alterna es senoidal?",
   opciones: [
-    "Porque surge del propio generador: el movimiento circular de los bobinados dentro del rotor provoca esa curva suavemente ondulada",
-    "Porque es la forma más fácil de dibujar en un gráfico",
-    "Porque los transformadores la convierten a esa forma",
-    "Porque los conductores de aluminio solo admiten esa forma de onda"
+    "Porque surge del giro de los bobinados dentro del generador",
+    "Porque es la forma de onda más fácil de dibujar en un gráfico",
+    "Porque los transformadores la convierten a esa forma de onda",
+    "Porque los conductores de aluminio solo admiten esa forma"
   ],
   correcta: 0,
   explicacion: "La forma senoidal surge del propio generador de energía: el movimiento circular de los bobinados dentro del rotor es el que provoca esa curva suavemente ondulada. Su nombre viene de la función matemática \"Seno\", también conocida como sinusoide, que se utiliza en trigonometría.",
@@ -712,7 +712,7 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "La onda senoidal es repetitiva y cíclica: existe una forma que, cada vez que termina, vuelve a ocurrir. A esa porción de onda que se repite se la denomina ciclo, y está formada por un semiciclo positivo y uno negativo. Por la simetría de la senoidal, cada ciclo puede subdividirse en semiciclos.",
   referencia: "Módulo 2, pág. 18 del PDF · 3.2 Periodo y frecuencia",
-  diagrama: { tipo: "ondas", b: false, a: "Un ciclo completo", nota: "Semiciclo positivo + semiciclo negativo = un ciclo", ciclos: 2 }
+  diagrama: { tipo: "ondas", b: false, a: "u(t)", ciclos: 2 }
 },
 
 {
@@ -727,22 +727,22 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "No hay que confundirlos: el ciclo hace referencia a la forma en sí de la curva (la porción de onda que se repite), mientras que el período es el tiempo necesario para completar dicha forma.",
   referencia: "Módulo 2, pág. 18 del PDF · 3.2 Periodo y frecuencia",
-  diagrama: { tipo: "onda", periodo: "T = período", amplitud: "Amplitud" }
+  diagrama: { tipo: "onda", periodo: "T", amplitud: "" }
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "En una onda senoidal, ¿qué se denomina AMPLITUD?",
   opciones: [
-    "El valor máximo de la onda; por la simetría entre semiciclos, el valor mínimo es numéricamente igual pero de signo contrario",
+    "El valor máximo que alcanza la onda",
     "El tiempo que tarda la onda en completar un ciclo",
     "La cantidad de ciclos que se repiten en un segundo",
-    "La diferencia entre el valor máximo y el valor mínimo de la onda"
+    "La diferencia entre el valor máximo y el mínimo"
   ],
   correcta: 0,
   explicacion: "La amplitud es el valor máximo de la onda. Dada la simetría que existe entre los semiciclos, el valor mínimo será numéricamente igual, aunque de signo contrario.",
   referencia: "Módulo 2, pág. 18 del PDF · 3.2 Periodo y frecuencia",
-  diagrama: { tipo: "onda", periodo: "T = período", amplitud: "Amplitud = valor máximo" }
+  diagrama: { tipo: "onda", periodo: "T", amplitud: "" }
 },
 
 {
@@ -757,22 +757,22 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "En Argentina el período de la tensión de línea es de 0,02 segundos (20 milisegundos) y la frecuencia utilizada es de 50 Hz. Son dos formas de decir lo mismo, porque f = 1/T y T = 1/f.",
   referencia: "Módulo 2, pág. 18 del PDF · 3.2 Periodo y frecuencia",
-  diagrama: { tipo: "onda", periodo: "T = 0,02 s", amplitud: "Valor máximo" }
+  diagrama: { tipo: "onda", periodo: "T", amplitud: "" }
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cómo se define la corriente alterna trifásica?",
   opciones: [
-    "Un conjunto de tres corrientes monofásicas idénticas en amplitud y frecuencia, pero desfasadas entre sí 120°, cada una transportada por un conductor independiente",
-    "Tres corrientes de distinta amplitud y frecuencia que circulan por el mismo conductor",
+    "Tres corrientes iguales en amplitud y frecuencia, desfasadas 120° entre sí",
+    "Tres corrientes de distinta amplitud y frecuencia por el mismo conductor",
     "Tres corrientes idénticas y en fase, transportadas por tres conductores",
-    "Un conjunto de tres corrientes desfasadas 90° entre sí"
+    "Un conjunto de tres corrientes desfasadas 90° entre sí, una por fase"
   ],
   correcta: 0,
   explicacion: "Son tres corrientes monofásicas idénticas en amplitud y frecuencia pero desfasadas 120°, cada una por un conductor independiente. El desfasaje de 120° se logra separando físicamente las bobinas en el estator del generador.",
   referencia: "Módulo 2, págs. 13 y 19 del PDF · 3.3 Sistema trifásico de corrientes",
-  diagrama: { tipo: "trifasica" }
+  diagrama: { tipo: "trifasica", nota: "Las tres fases de la red" }
 },
 
 {
@@ -787,17 +787,17 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "Para identificar las fases se las suele nombrar con letras o números como A, B, C o 1, 2, 3, pero lo más común es denominarlas con las letras R, S y T, mientras que la letra N se reserva para el neutro de la red.",
   referencia: "Módulo 2, pág. 19 del PDF · 3.3 Sistema trifásico de corrientes",
-  diagrama: { tipo: "trifasica" }
+  diagrama: { tipo: "trifasica", leyenda: false, nota: "Las tres fases de la red" }
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Dónde se usan los sistemas trifásicos de 4 conductores y dónde los de 3 conductores?",
   opciones: [
-    "Los de 4 conductores (3 fases y neutro) casi exclusivamente en distribución en baja tensión; los de 3 conductores en distribución y transmisión en media y alta tensión",
-    "Los de 4 conductores en alta tensión y los de 3 en baja tensión",
-    "Los de 4 conductores solo en generación y los de 3 solo en consumo domiciliario",
-    "No hay diferencia de uso: se eligen indistintamente"
+    "Los de 4 conductores en distribución de baja tensión; los de 3 en media y alta",
+    "Los de 4 conductores en alta tensión y los de 3 conductores en baja tensión",
+    "Los de 4 solo en generación y los de 3 solo en consumo domiciliario",
+    "No hay ninguna diferencia de uso: se eligen indistintamente"
   ],
   correcta: 0,
   explicacion: "El sistema de 4 conductores (3 fases y un neutro) se utiliza casi exclusivamente en sistemas de distribución en Baja Tensión, y presenta dos valores de tensión según entre qué puntos se tome. Las líneas de 3 conductores se usan para distribución y transmisión en media y alta tensión, donde no hay neutro.",
@@ -808,10 +808,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "dificil",
   pregunta: "En las líneas de 3 conductores de media y alta tensión, donde NO existe neutro, ¿se puede encontrar una tensión de fase?",
   opciones: [
-    "Sí, porque la tierra cumple la función de neutro: la tensión de fase se mide entre cualquiera de las fases y tierra",
+    "Sí, porque la tierra cumple la función de neutro",
     "No, porque sin neutro solo existe la tensión de línea",
-    "Sí, pero solo si se instala un neutro artificial en el punto de medición",
-    "No, porque en media y alta tensión ambas tensiones son iguales"
+    "Sí, pero solo instalando un neutro artificial en el punto",
+    "No, porque en media y alta ambas tensiones son iguales"
   ],
   correcta: 0,
   explicacion: "En las líneas de 3 conductores la tierra cumple la función de neutro. Por lo tanto la tensión de fase se mide entre cualquiera de las fases y tierra, o cualquier elemento apoyado en ella, como postes, escaleras o grúas. Es un punto de seguridad importante en el trabajo en altura.",
@@ -822,10 +822,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cómo se define la IMPEDANCIA?",
   opciones: [
-    "La oposición al paso de corriente en circuitos de corriente alterna, formada por resistencias, reactancias inductivas y reactancias capacitivas",
-    "La oposición al paso de corriente en circuitos de corriente continua, formada solo por resistencias",
-    "La suma aritmética de todas las resistencias de un circuito",
-    "El desfasaje que existe entre la tensión y la corriente"
+    "La oposición al paso de corriente en alterna: resistencias y reactancias",
+    "La oposición al paso de corriente en continua, formada solo por resistencias",
+    "La suma aritmética de todas las resistencias que tiene el circuito",
+    "El desfasaje que existe entre la onda de tensión y la de corriente"
   ],
   correcta: 0,
   explicacion: "La impedancia (Z) es la oposición al paso de corriente en circuitos de CA. En continua las únicas cargas posibles son las resistencias, pero en alterna se agregan las reactancias inductivas (XL) y capacitivas (XC). Una impedancia puede estar formada por los tres tipos de carga, por dos o por uno solo.",
@@ -836,10 +836,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cuál es la diferencia entre una reactancia inductiva (XL) y una capacitiva (XC)?",
   opciones: [
-    "La inductiva transforma energía eléctrica en campo magnético; la capacitiva la transforma en campo eléctrico. Ambas transformaciones son reversibles",
-    "La inductiva transforma energía eléctrica en campo eléctrico; la capacitiva en campo magnético",
-    "La inductiva realiza una transformación irreversible y la capacitiva una reversible",
-    "La inductiva se mide en Henry y la capacitiva en Farad"
+    "La inductiva la transforma en campo magnético; la capacitiva, en eléctrico",
+    "La inductiva la transforma en campo eléctrico; la capacitiva, en magnético",
+    "La inductiva hace una transformación irreversible y la capacitiva reversible",
+    "La inductiva se mide en Henry y la capacitiva se mide en Farad"
   ],
   correcta: 0,
   explicacion: "Las reactancias inductivas (bobinas, transformadores, motores) transforman energía eléctrica en campo magnético; las capacitivas (capacitores) la transforman en campo eléctrico. En ambos casos la transformación es reversible: cuando se desarma el campo se recupera la energía. Precisamente por eso comparten el nombre de reactancias. Las tres, R, XL y XC, se miden en ohm [Ω].",
@@ -850,10 +850,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué caracteriza a una RESISTENCIA dentro del conjunto de la impedancia?",
   opciones: [
-    "Es el único elemento que transforma la energía eléctrica en otra forma de manera irreversible: focos, estufas, planchas",
-    "Transforma la energía eléctrica en campo magnético de forma reversible",
-    "Transforma la energía eléctrica en campo eléctrico de forma reversible",
-    "No transforma energía: solo la almacena"
+    "Es el único que transforma la energía de manera irreversible",
+    "Transforma la energía eléctrica en campo magnético, de forma reversible",
+    "Transforma la energía eléctrica en campo eléctrico, de forma reversible",
+    "No transforma energía de ningún tipo: solamente la almacena"
   ],
   correcta: 0,
   explicacion: "Las resistencias son todos los elementos que transforman la energía eléctrica en alguna otra forma de manera IRREVERSIBLE, como los focos, las estufas o las planchas. Esa irreversibilidad es lo que las diferencia de las reactancias, que devuelven la energía al desarmar sus campos. Las tres se miden en ohm.",
@@ -864,85 +864,80 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Por qué la impedancia se trabaja matemáticamente como un vector y no como un escalar?",
   opciones: [
-    "Porque se expresa como Z = R + j(XL − XC): R es la componente horizontal y la resta de reactancias la vertical, así que hay que operarla vectorialmente",
-    "Porque su valor cambia con el tiempo",
-    "Porque se mide en ohm igual que la resistencia",
-    "Porque solo existe en circuitos trifásicos"
+    "Porque tiene una componente horizontal y otra vertical",
+    "Porque su valor cambia continuamente con el tiempo",
+    "Porque se mide en ohm, igual que la resistencia",
+    "Porque solo existe en los circuitos trifásicos"
   ],
   correcta: 0,
   explicacion: "La expresión Z = R + j(XL − XC) corresponde a un vector en forma rectangular, donde el valor de las resistencias es la componente horizontal y la resta entre XL y XC la componente vertical. Por eso no se pueden sumar los valores de forma tradicional. También puede expresarse en forma polar, con módulo Z y ángulo φ.",
-  referencia: "Módulo 2, págs. 20 y 21 del PDF · 3.4 Impedancia",
-  diagrama: { tipo: "triangulo", horizontal: "R", vertical: "XL − XC", hipotenusa: "Z", angulo: "φ" }
+  referencia: "Módulo 2, págs. 20 y 21 del PDF · 3.4 Impedancia"
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "En un circuito RESISTIVO PURO alimentado con tensión alterna, ¿cómo van la tensión y la corriente?",
   opciones: [
-    "En fase: las ondas viajan superpuestas, y cuando una pasa por cero la otra también. El ángulo φ es cero",
-    "Desfasadas 90°, con la corriente atrasada",
+    "En fase: cuando una pasa por cero, la otra también",
+    "Desfasadas 90°, con la corriente atrasada respecto de la tensión",
     "Desfasadas 90°, con la corriente adelantada",
-    "Desfasadas 180°, en oposición"
+    "Desfasadas 180°, una en oposición a la otra"
   ],
   correcta: 0,
   explicacion: "En un circuito puramente resistivo la corriente y la tensión no solo tienen la misma forma sino que además van en fase: las ondas viajan superpuestas, y cuando una pasa por cero la otra también. Visto en fasores, ambos giran uno sobre el otro y el ángulo φ vale cero.",
-  referencia: "Módulo 2, pág. 23 del PDF · 3.5.1 Circuito resistivo (R)",
-  diagrama: { tipo: "fasores", angulo: 0, nota: "φ = 0°  ·  tensión y corriente en fase" }
+  referencia: "Módulo 2, pág. 23 del PDF · 3.5.1 Circuito resistivo (R)"
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "En un circuito INDUCTIVO PURO, ¿qué ocurre entre la tensión y la corriente?",
   opciones: [
-    "La corriente atrasa 90° respecto de la tensión: es el máximo desfasaje inductivo",
+    "La corriente atrasa 90° respecto de la tensión",
     "La corriente adelanta 90° respecto de la tensión",
     "Van en fase, igual que en un circuito resistivo",
     "La corriente atrasa 45° respecto de la tensión"
   ],
   correcta: 0,
   explicacion: "En un circuito L la corriente \"atrasa\" respecto de la tensión: parados en cualquier punto del eje X vemos pasar primero la onda de tensión y luego, más atrasada, la de corriente. Si la carga es una inductancia pura el ángulo φ vale −90°, que es el máximo desfasaje inductivo.",
-  referencia: "Módulo 2, pág. 24 del PDF · 3.5.2 Circuito inductivo (L)",
-  diagrama: { tipo: "ondas", desfasaje: -90, nota: "La corriente atrasa 90° respecto de la tensión" }
+  referencia: "Módulo 2, pág. 24 del PDF · 3.5.2 Circuito inductivo (L)"
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "facil",
   pregunta: "En un circuito CAPACITIVO PURO, ¿qué ocurre entre la tensión y la corriente?",
   opciones: [
-    "La corriente adelanta 90° respecto de la tensión: es el máximo desfasaje capacitivo",
+    "La corriente adelanta 90° respecto de la tensión",
     "La corriente atrasa 90° respecto de la tensión",
-    "Van en fase, igual que en un circuito resistivo",
+    "Van en fase, igual que en un circuito resistivo puro",
     "La corriente adelanta 180° respecto de la tensión"
   ],
   correcta: 0,
   explicacion: "A diferencia del inductivo, en un circuito C la corriente \"adelanta\" respecto de la tensión: vemos pasar primero la onda de corriente y luego la de tensión. Si la carga es un capacitor puro el ángulo φ vale +90°, el máximo desfasaje capacitivo.",
-  referencia: "Módulo 2, págs. 24 y 25 del PDF · 3.5.3 Circuito capacitivo (C)",
-  diagrama: { tipo: "fasores", angulo: 90, nota: "φ = +90°  ·  la corriente adelanta" }
+  referencia: "Módulo 2, págs. 24 y 25 del PDF · 3.5.3 Circuito capacitivo (C)"
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "En un circuito R-C, ¿qué se puede afirmar sobre el desfasaje?",
   opciones: [
-    "La corriente siempre adelanta, con un ángulo comprendido entre 0° y 90° sin alcanzar los extremos",
-    "La corriente siempre atrasa, con un ángulo entre 0° y 90°",
-    "El desfasaje es exactamente 90°, igual que en el capacitivo puro",
-    "El desfasaje es siempre 45°, cualesquiera sean los valores"
+    "La corriente adelanta, con un ángulo entre 0° y 90°",
+    "La corriente atrasa, con un ángulo entre 0° y 90°",
+    "El desfasaje es exactamente 90°, como en el capacitivo puro",
+    "El desfasaje es siempre de 45°, sean cuales sean los valores"
   ],
   correcta: 0,
   explicacion: "En un R-C la corriente siempre está adelantada respecto de la tensión, pero el adelanto ya no es de 90° como en el capacitivo puro: está comprendido entre 0° y 90°. Si XC es mucho mayor el desfasaje será cercano a 90°; si son similares rondará los 45°; y si la resistencia es mucho mayor, cercano a 0°. Nunca llega a los extremos.",
-  referencia: "Módulo 2, pág. 26 del PDF · 3.5.5 Circuito resistivo y capacitivo (R-C)",
-  diagrama: { tipo: "fasores", angulo: 38, nota: "φ entre 0° y +90°  ·  la corriente adelanta" }
+  referencia: "Módulo 2, pág. 26 del PDF · 3.5.5 Circuito resistivo y capacitivo (R-C)"
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "dificil",
   pregunta: "Según el resumen del módulo, ¿cómo se comporta la corriente respecto de la tensión en cada tipo de carga?",
   opciones: [
-    "Atrasa 90° si es inductiva pura; atrasa entre 90° y 0° si es R-L; queda en fase si es resistiva pura; adelanta entre 0° y 90° si es R-C; adelanta 90° si es capacitiva pura",
-    "Adelanta 90° si es inductiva pura; queda en fase si es R-L; atrasa 90° si es capacitiva pura",
-    "Siempre queda en fase con la tensión, cualquiera sea la carga",
-    "Atrasa 90° si es capacitiva pura y adelanta 90° si es inductiva pura"
+    "Atrasa 90° en inductiva pura; en fase en resistiva; adelanta 90° en capacitiva",
+    "Adelanta 90° en inductiva pura; en fase en R-L; atrasa 90° en capacitiva pura",
+    "Queda siempre en fase con la tensión, cualquiera sea el tipo de carga conectada",
+    "Atrasa 90° en capacitiva pura y adelanta 90° en inductiva pura"
   ],
   correcta: 0,
   explicacion: "Ese es exactamente el resumen del módulo. Una regla práctica: la bobina (inductiva) hace que la corriente se retrase, el capacitor hace que se adelante, y la resistencia pura las deja en fase (φ = 0). En las cargas mixtas el ángulo queda entre 0° y 90° sin llegar nunca a los extremos.",
@@ -981,9 +976,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Se cumplen las leyes de Ohm y de Kirchhoff en los circuitos de corriente alterna?",
   opciones: [
-    "Sí, se cumplen igual que en continua, pero existen diferencias a la hora de analizar los parámetros eléctricos",
-    "No, en alterna esas leyes no tienen validez",
-    "Solo se cumple la de Ohm; las de Kirchhoff no",
+    "Sí, igual que en continua, pero cambia el análisis de los parámetros",
+    "No: en corriente alterna esas leyes pierden por completo su validez",
+    "Solo se cumple la ley de Ohm; las de Kirchhoff no se cumplen",
     "Solo se cumplen si el circuito es puramente resistivo"
   ],
   correcta: 0,
@@ -995,7 +990,7 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "Cuando medimos con un amperímetro o pinza amperométrica el consumo de un motor, ¿qué corriente estamos leyendo?",
   opciones: [
-    "El módulo de la corriente aparente, es decir la corriente total, sin poder distinguir cuánto es activa y cuánto reactiva",
+    "El módulo de la corriente aparente, es decir la corriente total",
     "Solamente la corriente activa, la que realiza el trabajo mecánico",
     "Solamente la corriente reactiva, la que genera el campo magnético",
     "La suma aritmética de la corriente activa más la reactiva"
@@ -1009,10 +1004,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué diferencia hay entre la corriente activa y la corriente reactiva?",
   opciones: [
-    "La activa es la que utilizan las resistencias y realiza trabajo; la reactiva es la que usan bobinas y capacitores para crear sus campos",
-    "La activa es la que usan las bobinas y la reactiva la que usan las resistencias",
-    "La activa circula en continua y la reactiva en alterna",
-    "Son la misma corriente medida con distintos instrumentos"
+    "La activa la usan las resistencias; la reactiva, bobinas y capacitores",
+    "La activa la usan las bobinas y la reactiva la usan las resistencias",
+    "La activa circula en corriente continua y la reactiva en alterna",
+    "Son la misma corriente, medida con dos instrumentos distintos"
   ],
   correcta: 0,
   explicacion: "La corriente activa es la utilizada por las resistencias del circuito: solo ellas la consumen y solo ellas realizan transformaciones irreversibles, así que representa la corriente utilizada para realizar trabajos. La reactiva es la que utilizan las bobinas y capacitores para crear sus campos magnéticos y eléctricos.",
@@ -1023,10 +1018,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Por qué la corriente aparente NO es la suma de la corriente activa más la reactiva?",
   opciones: [
-    "Porque la aparente es la \"diagonal\": la activa es la componente horizontal y la reactiva la vertical, así que se combinan vectorialmente",
-    "Porque la reactiva se resta en lugar de sumarse",
+    "Porque la activa y la reactiva se combinan vectorialmente",
+    "Porque la reactiva se resta en lugar de sumarse a la activa",
     "Porque la corriente aparente solo tiene en cuenta la activa",
-    "Porque la reactiva no existe realmente en el circuito"
+    "Porque la corriente reactiva no existe realmente en el circuito"
   ],
   correcta: 0,
   explicacion: "La corriente aparente es la corriente TOTAL, conformada por la activa en su componente horizontal y por la reactiva en la vertical. Si se intentara calcularla sumando activa más reactiva se caería en un error, porque vista gráficamente la aparente es la diagonal del rectángulo, no la suma de los lados.",
@@ -1037,7 +1032,7 @@ const BANCO_M2 = [
   modulo: 2, tema: "Corriente alterna", tipo: "teoria", dificultad: "dificil",
   pregunta: "En dos derivaciones el amperímetro mide 3 A y 5 A. ¿Por qué al medir la corriente total no se obtienen 8 A?",
   opciones: [
-    "Porque el instrumento muestra el módulo pero no el ángulo, y las corrientes tienen desfasajes distintos que hay que tener en cuenta al sumarlas",
+    "Porque el instrumento muestra el módulo, pero no el ángulo",
     "Porque el amperímetro siempre mide con un error del 40 %",
     "Porque una de las dos corrientes circula en sentido contrario",
     "Porque las corrientes en paralelo se restan, no se suman"
@@ -1158,7 +1153,7 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "Primero se resuelve la componente vertical: XL − XC = 12 − 4 = 8 Ω. Entonces Z = 6 + j8, y su módulo es √(6² + 8²) = √100 = 10 Ω. El error típico es sumar los tres valores (22 Ω) olvidando que las reactancias se restan entre sí y que el resultado es una suma vectorial.",
   referencia: "Módulo 2, pág. 20 del PDF · 3.4 Impedancia",
-  diagrama: { tipo: "triangulo", horizontal: "R = 6 Ω", vertical: "XL − XC = 8 Ω", hipotenusa: "Z = ?", angulo: "φ" }
+  diagrama: { tipo: "triangulo", horizontal: "R = 6 Ω", vertical: "XL − XC", hipotenusa: "Z = ?", angulo: "φ" }
 },
 
 {
@@ -1172,8 +1167,7 @@ const BANCO_M2 = [
   ],
   correcta: 0,
   explicacion: "Z = R + j(XL − XC) = 8 + j(3 − 9) = 8 − j6. Como XC supera a XL, la componente vertical queda NEGATIVA y el circuito resulta de carácter capacitivo: la corriente adelantará a la tensión. Su módulo es √(8² + 6²) = 10 Ω. Las reactancias se compensan entre sí: manda la más grande.",
-  referencia: "Módulo 2, págs. 20 y 21 del PDF · 3.4 Impedancia",
-  diagrama: { tipo: "triangulo", sentido: "abajo", horizontal: "R = 8 Ω", vertical: "XC − XL = 6 Ω", hipotenusa: "Z", angulo: "φ" }
+  referencia: "Módulo 2, págs. 20 y 21 del PDF · 3.4 Impedancia"
 },
 
 {
@@ -1187,8 +1181,7 @@ const BANCO_M2 = [
   ],
   correcta: 0,
   explicacion: "En un R-L la corriente siempre atrasa, y el ángulo está comprendido entre 0° y 90° sin alcanzar los extremos. Si XL es mucho mayor que R, el desfasaje será muy cercano a 90°; si son similares rondará los 45°; y si R es mucho mayor, el ángulo será cercano a 0°. Los 90° exactos solo se dan en una inductancia pura.",
-  referencia: "Módulo 2, pág. 25 del PDF · 3.5.4 Circuito resistivo e inductivo (R-L)",
-  diagrama: { tipo: "fasores", angulo: -72, nota: "XL mucho mayor que R: φ se acerca a −90°" }
+  referencia: "Módulo 2, pág. 25 del PDF · 3.5.4 Circuito resistivo e inductivo (R-L)"
 },
 
 {
@@ -1202,18 +1195,17 @@ const BANCO_M2 = [
   ],
   correcta: 0,
   explicacion: "Cuando ambos componentes tienen valores similares el desfasaje ronda los 45°. Es coherente con el triángulo de impedancias: si los dos catetos (R y XL) son parecidos, el ángulo entre la hipotenusa y el eje horizontal se acerca a 45°. La corriente atrasa porque la carga es inductiva.",
-  referencia: "Módulo 2, pág. 25 del PDF · 3.5.4 Circuito resistivo e inductivo (R-L)",
-  diagrama: { tipo: "fasores", angulo: -45, nota: "R y XL similares: φ ronda los −45°" }
+  referencia: "Módulo 2, pág. 25 del PDF · 3.5.4 Circuito resistivo e inductivo (R-L)"
 },
 
 {
   modulo: 2, tema: "Corriente alterna", tipo: "calculo", dificultad: "dificil",
   pregunta: "La corriente de un circuito, expresada en forma rectangular, es I = 6,8 + j 1,8 [A]. ¿Qué representa cada término?",
   opciones: [
-    "6,8 A es la corriente activa (la de las resistencias) y 1,8 A la corriente reactiva (la de bobinas y capacitores)",
+    "6,8 A es la corriente activa y 1,8 A la corriente reactiva",
     "6,8 A es la corriente reactiva y 1,8 A la corriente activa",
     "6,8 A es la corriente aparente y 1,8 A el error de medición",
-    "Los dos valores son corriente activa, medidos en dos instantes distintos"
+    "Las dos son corriente activa, medidas en instantes distintos"
   ],
   correcta: 0,
   explicacion: "El primer término, la componente horizontal, es la CORRIENTE ACTIVA: la que utilizan las resistencias, únicas que realizan transformaciones irreversibles y por lo tanto trabajo. El segundo, la componente vertical, es la CORRIENTE REACTIVA: la que usan bobinas y capacitores para crear sus campos. La aparente (7,1 A) es la diagonal, no la suma de las dos.",
@@ -1228,10 +1220,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué representa la POTENCIA ACTIVA (P) y en qué unidad se mide?",
   opciones: [
-    "La potencia útil, la que realmente se aprovecha y realiza un trabajo; se consume en las resistencias y se mide en Watt [W]",
-    "La potencia que no se consume y queda circulando en el circuito; se mide en VAr",
-    "La totalidad de potencia entregada por el sistema; se mide en VA",
-    "La potencia perdida por efecto Joule en los conductores; se mide en kWh"
+    "La potencia útil, la que realiza trabajo; se mide en Watt [W]",
+    "La que no se consume y queda circulando por el circuito; se mide en VAr",
+    "La totalidad de la potencia entregada por el sistema; se mide en VA",
+    "La que se pierde por efecto Joule en los conductores; se mide en kWh"
   ],
   correcta: 0,
   explicacion: "La potencia activa es la \"potencia útil\": la energía del eje de un motor que mueve un mecanismo, el calor de una resistencia, la luz de una lámpara. Se consume en las resistencias de la máquina o instalación, se representa con P y su unidad es el Watt [W]. Es la que registran los medidores y la que se factura.",
@@ -1242,8 +1234,8 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Qué caracteriza a la POTENCIA REACTIVA (Q)?",
   opciones: [
-    "Realmente NO es consumida ni produce trabajo útil: es necesaria para crear los campos magnéticos y eléctricos de bobinas y condensadores. Se mide en VoltAmper Reactivos [VAr]",
-    "Es la potencia que se transforma íntegramente en trabajo útil y se mide en Watt",
+    "No produce trabajo útil: crea los campos de bobinas y capacitores",
+    "Es la que se transforma íntegramente en trabajo útil; se mide en Watt",
     "Es la suma vectorial de la potencia activa y la aparente, medida en VA",
     "Es la potencia que se pierde en forma de calor en los conductores"
   ],
@@ -1256,9 +1248,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cuáles son las unidades de las tres potencias?",
   opciones: [
-    "Activa en Watt [W], reactiva en VoltAmper Reactivos [VAr] y aparente en Volt-Amper [VA]",
-    "Activa en VA, reactiva en W y aparente en VAr",
-    "Las tres se miden en Watt [W]",
+    "Activa en Watt, reactiva en VAr y aparente en Volt-Amper",
+    "Activa en VA, reactiva en Watt y aparente en VoltAmper Reactivos",
+    "Las tres se miden en Watt, con distintos múltiplos",
     "Activa en kWh, reactiva en VAr y aparente en Watt"
   ],
   correcta: 0,
@@ -1270,10 +1262,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Cómo se relacionan la potencia reactiva inductiva (QL) y la capacitiva (QC)?",
   opciones: [
-    "Tienen las mismas características pero signos opuestos (QL positiva y QC negativa), por lo que se compensan entre sí: si hay igual cantidad de ambas, la Q total es cero",
-    "Se suman entre sí, por lo que instalar capacitores empeora el problema",
-    "Son idénticas en todo, incluido el signo, y no pueden compensarse",
-    "La QC solo existe en corriente continua y la QL solo en alterna"
+    "Tienen signos opuestos, así que se compensan entre sí",
+    "Se suman, por lo que instalar capacitores empeora el problema",
+    "Son idénticas en todo, incluido el signo, y no se compensan",
+    "La QC solo existe en continua y la QL solo en alterna"
   ],
   correcta: 0,
   explicacion: "Los dos subtipos tienen las mismas características, solo que una es positiva (QL, de las bobinas) y la otra negativa (QC, de los condensadores). En definitiva se compensan una con otra: si hay la misma cantidad de QL que de QC, la suma total de Q es cero y para el sistema eléctrico es como si esas potencias no existieran. Ese es el fundamento de la compensación del factor de potencia.",
@@ -1284,40 +1276,38 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cómo se obtiene la POTENCIA APARENTE (S) a partir de la activa y la reactiva?",
   opciones: [
-    "Como la suma vectorial (geométrica) de P y Q, es decir la hipotenusa del triángulo de potencias; se mide en Volt-Amper [VA]",
+    "Como la suma vectorial de P y Q; se mide en Volt-Amper [VA]",
     "Como la suma aritmética directa de P más Q; se mide en Watt",
-    "Como la resta de P menos Q; se mide en VAr",
-    "Como el producto de P por Q; se mide en VA"
+    "Como la resta de P menos Q; se mide en VoltAmper Reactivos",
+    "Como el producto de P por Q; se mide en Volt-Amper [VA]"
   ],
   correcta: 0,
   explicacion: "La potencia aparente es la totalidad de potencia entregada por el sistema a la instalación. Está formada por P y Q, pero matemáticamente es la suma VECTORIAL de ambas: no se pueden sumar de la forma tradicional. En el triángulo de potencias, S es la hipotenusa.",
-  referencia: "Módulo 2, pág. 31 del PDF · 3.7.3 Potencia aparente",
-  diagrama: { tipo: "triangulo", horizontal: "P", vertical: "Q", hipotenusa: "S", angulo: "φ" }
+  referencia: "Módulo 2, pág. 31 del PDF · 3.7.3 Potencia aparente"
 },
 
 {
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "medio",
   pregunta: "En el triángulo de potencias, ¿dónde se ubican la potencia activa y la reactiva?",
   opciones: [
-    "P siempre en el eje horizontal y hacia la derecha; Q a 90° en el extremo de P, coincidiendo con la reactancia del triángulo de impedancias",
-    "P en el eje vertical y Q en el horizontal",
+    "P en el eje horizontal y Q a 90°, en el extremo de P",
+    "P en el eje vertical y Q en el eje horizontal",
     "P y Q sobre la misma línea, una a continuación de la otra",
-    "P en la hipotenusa y Q en el eje horizontal"
+    "P en la hipotenusa y Q sobre el eje horizontal"
   ],
   correcta: 0,
   explicacion: "La potencia activa P se encuentra siempre en el eje horizontal y hacia la derecha, porque se consume en las resistencias y por eso coincide con R en el triángulo de impedancias. En el extremo de P y a 90° está la potencia reactiva Q, cuya posición coincide con la reactancia inductiva. Si la reactancia fuese capacitiva, se invierte el sentido de Q.",
-  referencia: "Módulo 2, pág. 31 del PDF · 3.8 Triángulo de potencias",
-  diagrama: { tipo: "triangulo", horizontal: "P", vertical: "Q", hipotenusa: "S", angulo: "φ" }
+  referencia: "Módulo 2, pág. 31 del PDF · 3.8 Triángulo de potencias"
 },
 
 {
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cómo se define matemáticamente el factor de potencia?",
   opciones: [
-    "Como la relación entre la potencia activa y la potencia aparente: P / S, que es igual al coseno del ángulo φ",
-    "Como la relación entre la potencia reactiva y la activa: Q / P",
-    "Como la relación entre la potencia aparente y la activa: S / P",
-    "Como el producto de la potencia activa por la aparente: P × S"
+    "La relación entre la potencia activa y la aparente: P / S",
+    "La relación entre la potencia reactiva y la activa: Q / P",
+    "La relación entre la potencia aparente y la activa: S / P",
+    "El producto de la potencia activa por la aparente: P × S"
   ],
   correcta: 0,
   explicacion: "Factor de potencia = P / S = cos(φ). En el triángulo de potencias, φ es el ángulo entre P y S; por la relación trigonométrica del triángulo rectángulo, el coseno de un ángulo es su cateto adyacente (P) dividido por la hipotenusa (S). Es adimensional: no tiene unidad, porque expresa un porcentaje.",
@@ -1329,10 +1319,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué valores puede tomar el factor de potencia y qué significa su signo?",
   opciones: [
-    "Va de 1 a 0, donde 1 es el ideal (100% activa). El signo es convencional: negativo si el reactivo lo genera una bobina, positivo si lo genera un capacitor",
-    "Va de 0 a 100, donde 100 es el ideal. El signo indica si la instalación es monofásica o trifásica",
-    "Va de 1 a 0, donde 0 es el ideal. El signo negativo indica una carga capacitiva",
-    "Puede tomar cualquier valor, incluso mayor que 1 en instalaciones sobrecompensadas"
+    "Va de 1 a 0, donde 1 es el ideal; el signo indica quién genera el reactivo",
+    "Va de 0 a 100, donde 100 es el ideal; el signo indica si es mono o trifásica",
+    "Va de 1 a 0, donde 0 es el ideal; el signo negativo indica carga capacitiva",
+    "Puede tomar cualquier valor, incluso mayor que 1 si está sobrecompensada"
   ],
   correcta: 0,
   explicacion: "El factor de potencia va de 1 a 0: 1 es el valor ideal (el 100% de la energía utilizada es activa) y 0 la peor condición (todo lo consumido es reactivo). El signo se coloca por convención, no surge del cálculo matemático: si el consumo de reactivo lo genera una bobina el signo es negativo; si lo produce un capacitor, positivo.",
@@ -1343,9 +1333,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Entre qué valores de factor de potencia exige EPE que se mantengan los grandes usuarios?",
   opciones: [
-    "Entre +0,95 y −0,95, es decir que como mínimo el 95% de la energía utilizada sea activa",
+    "Entre +0,95 y −0,95",
     "Entre +0,80 y −0,80",
-    "Exactamente en 1, sin ningún margen de tolerancia",
+    "Exactamente en 1, sin ningún margen",
     "Entre +0,50 y −0,50"
   ],
   correcta: 0,
@@ -1357,9 +1347,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Qué ocurre con la energía reactiva en la facturación y en los medidores?",
   opciones: [
-    "No se tiene en cuenta para la facturación de pequeños clientes; los medidores digitales sí la miden, los analógicos no",
-    "Se factura igual que la activa a todos los clientes",
-    "Ningún medidor es capaz de registrarla",
+    "No se factura a pequeños clientes; solo la miden los medidores digitales",
+    "Se factura exactamente igual que la energía activa a todos los clientes",
+    "Ningún medidor, ni digital ni analógico, es capaz de registrarla",
     "Solo la registran los medidores analógicos, no los digitales"
   ],
   correcta: 0,
@@ -1371,10 +1361,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Cuáles son los principales inconvenientes de un mal factor de potencia?",
   opciones: [
-    "Incremento de pérdidas por efecto Joule, sobrecarga de generadores, transformadores y líneas, aumento de la caída de tensión e incremento de la potencia aparente",
-    "Aumento del consumo de energía activa facturada al cliente",
-    "Disminución de la corriente total que circula por la red",
-    "Reducción de la vida útil de los medidores domiciliarios únicamente"
+    "Más pérdidas por efecto Joule, sobrecarga de líneas y más caída de tensión",
+    "Aumento del consumo de energía activa que se le factura al cliente final",
+    "Disminución de la corriente total que circula por toda la red",
+    "Reducción de la vida útil de los medidores domiciliarios"
   ],
   correcta: 0,
   explicacion: "El módulo enumera esos cuatro. La raíz de todos es la misma: un bajo factor de potencia implica gran corriente reactiva, lo que aumenta la corriente TOTAL. Y esa corriente extra calienta (pérdidas I²R), sobrecarga los equipos, aumenta la caída de tensión (I·R) y eleva la potencia aparente que debe entregar la máquina.",
@@ -1385,8 +1375,8 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "medio",
   pregunta: "En la analogía de la jarra de cerveza que usa el módulo, ¿qué representa cada elemento?",
   opciones: [
-    "La capacidad de la jarra es la potencia aparente [kVA], la cerveza líquida la potencia activa [kW] y la espuma la potencia reactiva [kVAr]",
-    "La jarra es la potencia activa, la cerveza la reactiva y la espuma la aparente",
+    "La jarra es la aparente, la cerveza la activa y la espuma la reactiva",
+    "La jarra es la activa, la cerveza la reactiva y la espuma la aparente",
     "La jarra es la energía facturada, la cerveza el costo y la espuma el impuesto",
     "La jarra es la corriente, la cerveza la tensión y la espuma la resistencia"
   ],
@@ -1399,10 +1389,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Cómo se corrige el factor de potencia de una carga inductiva, y dónde conviene instalar el equipo de compensación?",
   opciones: [
-    "Con condensadores conectados en paralelo con la carga, instalados lo más cerca posible de ella, porque la liberación de energía reactiva se produce aguas arriba del banco",
-    "Con bobinas conectadas en serie con la carga, instaladas en la estación transformadora",
-    "Con condensadores conectados en serie con la carga, en cualquier punto de la línea",
-    "Con resistencias conectadas en paralelo, lo más cerca posible de la fuente"
+    "Con condensadores en paralelo, lo más cerca posible de la carga",
+    "Con bobinas en serie con la carga, en la estación transformadora",
+    "Con condensadores en serie, en cualquier punto de la línea",
+    "Con resistencias en paralelo, lo más cerca posible de la fuente"
   ],
   correcta: 0,
   explicacion: "La corrección se hace con condensadores en paralelo con la carga: si en el mismo circuito hay una reactancia inductiva y una capacitiva de igual valor, las cargas reactivas se anulan entre sí. Y la ubicación importa: la liberación de energía reactiva se produce aguas arriba del banco, porque entre este y la carga inductiva dicha energía sigue circulando. Por eso conviene compensar en las proximidades de la carga.",
@@ -1413,10 +1403,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Por qué el intercambio entre bobinas y capacitores hace que la fuente ya no deba entregar energía reactiva?",
   opciones: [
-    "Porque la energía reactiva queda confinada entre ambos elementos: el momento en que uno la demanda coincide con el que el otro la devuelve, y viceversa",
-    "Porque los capacitores destruyen la energía reactiva",
-    "Porque las bobinas dejan de generar campo magnético al haber capacitores",
-    "Porque los capacitores transforman la energía reactiva en energía activa"
+    "Porque la energía reactiva queda confinada entre ambos elementos",
+    "Porque los capacitores destruyen la energía reactiva sobrante",
+    "Porque las bobinas dejan de generar campo si hay capacitores",
+    "Porque los capacitores convierten la reactiva en energía activa"
   ],
   correcta: 0,
   explicacion: "El efecto se da debido al intercambio energético entre bobinas y capacitores: la energía reactiva queda confinada entre ambos elementos, porque si bien los dos la necesitan, el momento en que uno demanda coincide con el que el otro devuelve. Los campos magnéticos siguen existiendo (sin ellos un motor o un transformador no funcionaría); lo que cambia es quién los alimenta.",
@@ -1427,9 +1417,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "dificil",
   pregunta: "¿Cómo se compensa un factor de potencia CAPACITIVO, y en qué caso típico aparece?",
   opciones: [
-    "Con cargas inductivas en paralelo; aparece en líneas muy largas de alta y muy alta tensión cuando están en vacío o con muy poca carga",
-    "Con más capacitores en paralelo; aparece en instalaciones con muchos motores",
-    "Con resistencias en serie; aparece en hornos eléctricos",
+    "Con cargas inductivas en paralelo; pasa en líneas largas en vacío",
+    "Con más capacitores en paralelo; pasa en instalaciones con motores",
+    "Con resistencias en serie; pasa típicamente en hornos eléctricos",
     "No hace falta compensarlo: un factor capacitivo nunca es perjudicial"
   ],
   correcta: 0,
@@ -1441,9 +1431,9 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "teoria", dificultad: "medio",
   pregunta: "¿Por qué hay que tener en cuenta el factor de potencia al dimensionar conductores y llaves termomagnéticas?",
   opciones: [
-    "Porque el circuito debe poder manejar la corriente TOTAL, aunque la parte reactiva no sea facturada por la distribuidora",
+    "Porque el circuito debe manejar la corriente TOTAL, no solo la facturada",
     "Porque las termomagnéticas se calibran en VAr y no en amperes",
-    "Porque un factor de potencia bajo reduce la corriente y permite usar menos sección",
+    "Porque un factor bajo reduce la corriente y permite usar menos sección",
     "Porque la distribuidora exige sobredimensionar todo al doble"
   ],
   correcta: 0,
@@ -1511,15 +1501,15 @@ const BANCO_M2 = [
   modulo: 2, tema: "Potencias y factor de potencia", tipo: "calculo", dificultad: "dificil",
   pregunta: "Un gran cliente tiene una potencia activa de 55.000 W y demanda 59.782 VA. ¿Cuál es su factor de potencia y su aprovechamiento?",
   opciones: [
-    "0,92 · aprovecha el 92 % de la energía que se le transporta",
-    "1,09 · aprovecha el 109 % de la energía",
-    "0,55 · aprovecha el 55 % de la energía",
-    "0,08 · aprovecha el 8 % de la energía"
+    "0,92 · aprovecha el 92 % de la energía transportada",
+    "1,09 · aprovecha el 109 % de la energía transportada",
+    "0,55 · aprovecha el 55 % de la energía transportada",
+    "0,08 · aprovecha el 8 % de la energía transportada"
   ],
   correcta: 0,
   explicacion: "Factor de potencia = P / S = 55.000 / 59.782 = 0,92. Significa que el 92 % de la energía total que atraviesa la instalación se transforma en trabajo útil. Dividir al revés (S/P) daría 1,09, un valor imposible: el factor de potencia nunca supera 1.",
   referencia: "Módulo 2, pág. 35 del PDF · Tabla de factor de potencia",
-  diagrama: { tipo: "triangulo", horizontal: "P = 55.000 W", vertical: "Q = 23.358 VAr", hipotenusa: "S = 59.782 VA", angulo: "φ = 23°" }
+  diagrama: { tipo: "triangulo", horizontal: "P = 55.000 W", vertical: "Q", hipotenusa: "S = 59.782 VA", angulo: "φ" }
 },
 
 {
@@ -1534,7 +1524,7 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "La potencia activa sigue siendo 55.000 W, así que el cliente paga lo mismo. Pero la aparente sube: S = 55.000 / 0,63 = 87.301 VA, y con ella la corriente, que pasa de 4,1 A a 6,6 A. Ese es el punto de toda la tabla: la facturación no cambia, pero la repercusión sobre las instalaciones de la distribuidora es enorme.",
   referencia: "Módulo 2, pág. 35 del PDF · Tabla de factor de potencia",
-  diagrama: { tipo: "triangulo", horizontal: "P = 55.000 W", vertical: "Q = 67.845 VAr", hipotenusa: "S = 87.301 VA", angulo: "φ = 51°" }
+  diagrama: { tipo: "triangulo", horizontal: "P = 55.000 W", vertical: "Q", hipotenusa: "S = ?", angulo: "φ" }
 },
 
 /* ══════════════════════════════════════════════════════════
@@ -1559,10 +1549,10 @@ const BANCO_M2 = [
   modulo: 2, tema: "Trigonometría y vectores", tipo: "teoria", dificultad: "facil",
   pregunta: "¿Cuál es la diferencia entre una magnitud escalar y una vectorial?",
   opciones: [
-    "La escalar queda definida por un número y su unidad; la vectorial necesita además dirección, sentido y punto de aplicación",
+    "La escalar solo necesita un número y su unidad; la vectorial además dirección",
     "La escalar necesita dirección y sentido; la vectorial solo un número",
     "La escalar se usa en continua y la vectorial en alterna, pero son lo mismo",
-    "No hay diferencia: son dos nombres para el mismo concepto"
+    "No hay ninguna diferencia: son dos nombres para el mismo concepto"
   ],
   correcta: 0,
   explicacion: "Magnitudes como la energía o la temperatura quedan definidas por un número y las unidades de su medida: son escalares. Otras, como la velocidad, la fuerza o el campo magnético, necesitan además una dirección, un sentido y un punto de aplicación: son vectoriales.",
@@ -1602,7 +1592,7 @@ const BANCO_M2 = [
   modulo: 2, tema: "Trigonometría y vectores", tipo: "teoria", dificultad: "medio",
   pregunta: "En un triángulo rectángulo, el COSENO de un ángulo es igual a…",
   opciones: [
-    "su cateto adyacente dividido por la hipotenusa, que es justamente la relación P / S del factor de potencia",
+    "su cateto adyacente dividido por la hipotenusa",
     "su cateto opuesto dividido por la hipotenusa",
     "su cateto opuesto dividido por el cateto adyacente",
     "la hipotenusa dividida por el cateto adyacente"
@@ -1610,7 +1600,7 @@ const BANCO_M2 = [
   correcta: 0,
   explicacion: "El coseno de un ángulo es su cateto adyacente dividido su hipotenusa. Aplicado al triángulo de potencias: el cateto adyacente a φ es P y la hipotenusa es S, de modo que cos(φ) = P / S. Por eso el factor de potencia y el coseno de φ son lo mismo.",
   referencia: "Módulo 2, págs. 32 y 42 del PDF · Factor de potencia y trigonometría",
-  diagrama: { tipo: "triangulo", horizontal: "Cateto adyacente (P)", vertical: "Cateto opuesto (Q)", hipotenusa: "Hipotenusa (S)", angulo: "φ" }
+  diagrama: { tipo: "triangulo", horizontal: "Cateto adyacente", vertical: "Cateto opuesto", hipotenusa: "Hipotenusa", angulo: "φ" }
 },
 
 {
@@ -1709,8 +1699,7 @@ const BANCO_M2 = [
   ],
   correcta: 0,
   explicacion: "La componente horizontal es 4 · cos(38°) = 3,15 y la vertical 4 · sen(38°) = 2,46. Entonces F = 3,15 + j 2,46. Como el ángulo es menor a 45°, la componente horizontal tiene que ser la mayor de las dos: eso permite descartar de entrada la opción que las invierte.",
-  referencia: "Módulo 2, pág. 48 del PDF · 4.2.6 Pasaje de forma polar a rectangular",
-  diagrama: { tipo: "vector", x: 3.15, y: 2.46, etiqueta: "F = 4 ∠ 38°", rango: 5 }
+  referencia: "Módulo 2, pág. 48 del PDF · 4.2.6 Pasaje de forma polar a rectangular"
 }
 
 ];
