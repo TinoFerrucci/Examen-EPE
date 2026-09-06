@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+<p id="aviso-guardado" class="aviso-guardado" role="status" hidden></p>
 
 <!-- ══════════════ PANTALLA DE INICIO ══════════════ -->
 <main id="pantalla-inicio" class="pantalla activa">
@@ -22,6 +23,13 @@
       </p>
     </header>
 
+    <section id="sesion-pendiente" class="tema-fila" hidden aria-label="Intento guardado">
+      <h2 class="campo-titulo">Tenés un intento en curso</h2>
+      <p id="sesion-resumen"></p>
+      <p class="ayuda">En modo Examen el tiempo sigue corriendo aunque cierres la página.</p>
+      <button id="btn-continuar" class="btn btn-primario">Continuar intento</button>
+      <button id="btn-descartar" class="btn btn-texto">Descartar intento</button>
+    </section>
     <section class="config">
 
       <div class="campo">
@@ -63,7 +71,17 @@
       </div>
 
       <div class="campo">
-        <h2 class="campo-titulo">2 · ¿Con qué nivel de dificultad?</h2>
+        <h2 class="campo-titulo">2 · ¿Qué temas querés practicar?</h2>
+        <div class="temas-acciones">
+          <button type="button" id="btn-todos-temas" class="btn btn-secundario">Seleccionar todos</button>
+          <button type="button" id="btn-ningun-tema" class="btn btn-texto">Limpiar selección</button>
+          <span id="temas-resumen" role="status"></span>
+        </div>
+        <div id="sel-temas" class="temas-grupos"></div>
+      </div>
+
+      <div class="campo">
+        <h2 class="campo-titulo">3 · ¿Con qué nivel de dificultad?</h2>
         <div class="pastillas" id="sel-dificultad" role="group" aria-label="Nivel de dificultad"></div>
         <p class="ayuda">
           <strong>Fácil:</strong> definiciones y datos directos. ·
@@ -73,7 +91,7 @@
       </div>
 
       <div class="campo">
-        <h2 class="campo-titulo">3 · ¿Cómo querés que se corrija?</h2>
+        <h2 class="campo-titulo">4 · ¿Cómo querés que se corrija?</h2>
         <div class="opciones-grid dos">
           <label class="tarjeta">
             <input type="radio" name="modo" value="practica" checked>
@@ -93,7 +111,7 @@
       </div>
 
       <div class="campo">
-        <h2 class="campo-titulo">4 · ¿Cuántas preguntas?</h2>
+        <h2 class="campo-titulo">5 · ¿Cuántas preguntas?</h2>
         <div class="pastillas" id="sel-cantidad" role="group" aria-label="Cantidad de preguntas"></div>
         <p class="ayuda" id="ayuda-cantidad">
           Se eligen al azar del banco y se reparten entre los temas. El orden de las preguntas y de las opciones cambia en cada intento.
@@ -122,7 +140,7 @@
 
   <div class="barra-superior">
     <div class="contenedor barra-superior-int">
-      <button id="btn-salir" class="btn btn-texto btn-salir" title="Abandonar el intento">← Salir</button>
+      <button id="btn-salir" class="btn btn-texto btn-salir" title="Guardar y volver al inicio">← Guardar y salir</button>
       <div class="progreso-info">
         <span id="contador">Pregunta 1 de 30</span>
         <span id="etiqueta-modo" class="chip">Práctica</span>
@@ -193,6 +211,12 @@
           <div><dt>Tiempo</dt><dd id="res-tiempo">—</dd></div>
         </dl>
       </div>
+    </section>
+
+    <section class="bloque" aria-labelledby="plan-titulo">
+      <h2 id="plan-titulo" class="campo-titulo">Qué repasar ahora</h2>
+      <p class="ayuda">Sugerencias basadas en este intento. Las preguntas omitidas y las marcadas también se incluyen.</p>
+      <div id="plan-repaso" class="desglose"></div>
     </section>
 
     <section class="bloque">

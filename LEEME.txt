@@ -24,6 +24,25 @@ carpeta. Si movés solo index.html, no va a funcionar.
 
 QUÉ TIENE
 ---------
+
+· Selección de temas con casillas agrupadas por módulo. Podés elegir
+  varios, seleccionar todos o limpiar. Los conteos respetan la dificultad.
+  También funciona dentro de «Repasar mis erradas».
+
+· El intento se guarda en este navegador al responder, navegar o marcar.
+  «Guardar y salir» vuelve al inicio; «Continuar intento» recupera el orden
+  de las opciones, las respuestas y las marcas, incluso tras una recarga.
+  En Examen, cerrar la página NO pausa el tiempo. Si vence, al continuar
+  se muestra el resultado. Se puede descartar un intento desde el inicio.
+
+· «Qué repasar ahora» ordena los temas por errores y omisiones, incluye
+  las preguntas marcadas y ofrece las páginas para estudiar. «Practicar
+  este tema» prepara hasta 10 preguntas en Práctica, de todos los niveles.
+  Podés ajustar la configuración antes de comenzar.
+
+· Los nuevos intentos guardan su detalle en el historial: respuestas,
+  explicaciones y plan de repaso. Los anteriores conservan su resumen.
+  Todo se guarda en el navegador actual, sin sincronización entre equipos.
 · Elegís Módulo 1, Módulo 2 o Integrador (los dos mezclados).
 
 · Nivel de dificultad: Todas, Fácil, Medio o Difícil.

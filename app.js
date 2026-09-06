@@ -13,6 +13,8 @@
   var CLAVE_HISTORIAL = "epe_examen_historial";
   var CLAVE_ERRADAS   = "epe_examen_erradas";
   var MAX_HISTORIAL = 8;
+  var CLAVE_SESION = "epe_examen_sesion";
+  var temasElegidos = null;
 
   var NOMBRE_MODULO = {
     "1": "Módulo 1", "2": "Módulo 2", "todos": "Integrador", "erradas": "Mis erradas"
@@ -225,9 +227,10 @@
      Reparte el cupo entre los temas disponibles de forma
      proporcional, para que un intento corto no quede
      concentrado en un solo tema.                             */
-  function disponibles(modulo, dificultad) {
+  function disponibles(modulo, dificultad, ignorarTemas) {
     var erradas = modulo === "erradas" ? leerErradas() : null;
     return BANCO.filter(function (p) {
+      if (!ignorarTemas && temasElegidos !== null && temasElegidos.indexOf(p.tema) < 0) return false;
       if (dificultad !== "todas" && p.dificultad !== dificultad) return false;
       if (modulo === "erradas") return !!erradas[idPregunta(p)];
       return modulo === "todos" || String(p.modulo) === String(modulo);
@@ -283,7 +286,10 @@
 
   function guardarJSON(clave, valor) {
     try { window.localStorage.setItem(clave, JSON.stringify(valor)); }
-    catch (e) { /* modo privado o almacenamiento bloqueado: se ignora */ }
+    catch (e) {
+      $("aviso-guardado").textContent = "No se pudo guardar el historial o el repaso en este navegador. El resultado sigue disponible mientras mantengas esta página abierta.";
+      $("aviso-guardado").hidden = false;
+    }
   }
 
   function leerHistorial() {
@@ -325,6 +331,162 @@
     guardarJSON(CLAVE_HISTORIAL, datos.slice(0, MAX_HISTORIAL));
   }
 
+  function pintarTemas() {
+    var pool = disponibles(leerModuloElegido(), "todas", true);
+    var cont = $("sel-temas"), foco = document.activeElement.dataset.tema;
+    cont.innerHTML = "";
+    var cantidad = 0, seleccionados = 0;
+    [1, 2].forEach(function (modulo) {
+      var temas = {};
+      pool.filter(function (p) { return p.modulo === modulo; }).forEach(function (p) {
+        if (!(p.tema in temas)) temas[p.tema] = 0;
+        if (dificultadElegida === "todas" || dificultadElegida === p.dificultad) temas[p.tema]++;
+      });
+      if (!Object.keys(temas).length) return;
+      var grupo = crear("fieldset", "temas-grupo");
+      grupo.appendChild(crear("legend", null, "Módulo " + modulo));
+      Object.keys(temas).forEach(function (tema) {
+        cantidad++;
+        var label = crear("label", "tema-opcion"), input = document.createElement("input");
+        input.type = "checkbox";
+        input.dataset.tema = tema;
+        input.checked = temasElegidos === null || temasElegidos.indexOf(tema) >= 0;
+        if (input.checked) seleccionados++;
+        input.addEventListener("change", function () {
+          if (temasElegidos === null) temasElegidos = Array.from(new Set(pool.map(function (p) { return p.tema; })));
+          temasElegidos = temasElegidos.filter(function (t) { return t !== tema; });
+          if (input.checked) temasElegidos.push(tema);
+          actualizarDisponibles();
+        });
+        label.appendChild(input);
+        label.appendChild(crear("span", null, tema));
+        label.appendChild(crear("small", null, temas[tema] + " disponibles"));
+        grupo.appendChild(label);
+      });
+      cont.appendChild(grupo);
+    });
+    $("temas-resumen").textContent = seleccionados + " de " + cantidad + " temas seleccionados";
+    if (foco) Array.from(cont.querySelectorAll("input")).forEach(function (i) { if (i.dataset.tema === foco) i.focus(); });
+  }
+
+  function copiaEstado() {
+    var copia = Object.assign({}, estado);
+    copia.intervalo = null;
+    return JSON.parse(JSON.stringify(copia));
+  }
+
+  function estadoValido(d) {
+    return !!(d && ["practica", "examen"].indexOf(d.modo) >= 0 &&
+      Number.isFinite(d.inicio) && (d.modo !== "examen" || Number.isFinite(d.vence)) &&
+      Array.isArray(d.preguntas) && d.preguntas.length > 0 && d.preguntas.length <= 1000 &&
+      Number.isInteger(d.actual) && d.actual >= 0 && d.actual < d.preguntas.length &&
+      d.preguntas.every(function (p) {
+        return p && p.base && typeof p.base.pregunta === "string" && typeof p.base.tema === "string" &&
+          Array.isArray(p.opciones) && p.opciones.length === 4 && p.opciones.every(function (o) { return typeof o === "string"; }) &&
+          Number.isInteger(p.correcta) && p.correcta >= 0 && p.correcta < 4 &&
+          (p.respuesta === null || (Number.isInteger(p.respuesta) && p.respuesta >= 0 && p.respuesta < 4));
+      }));
+  }
+
+  function leerSesion() {
+    var d = leerJSON(CLAVE_SESION, null);
+    return estadoValido(d) && !d.terminado ? d : null;
+  }
+
+  function guardarSesion() {
+    if (!estado || estado.terminado) return true;
+    try {
+      window.localStorage.setItem(CLAVE_SESION, JSON.stringify(copiaEstado()));
+      $("aviso-guardado").hidden = true;
+      return true;
+    } catch (e) {
+      $("aviso-guardado").textContent = "No se pudo guardar el intento. Mantené la página abierta para conservar tus respuestas.";
+      $("aviso-guardado").hidden = false;
+      return false;
+    }
+  }
+
+  function borrarSesion() {
+    try { window.localStorage.removeItem(CLAVE_SESION); } catch (e) {}
+  }
+
+  function pintarSesion() {
+    var d = leerSesion();
+    $("sesion-pendiente").hidden = !d;
+    if (!d) return;
+    var respondidas = d.preguntas.filter(function (p) { return p.respuesta !== null; }).length;
+    $("sesion-resumen").textContent = (d.modo === "examen" ? "Examen" : "Práctica") + " · " +
+      respondidas + " de " + d.preguntas.length + " respondidas · pregunta " + (d.actual + 1);
+    $("btn-continuar").textContent = d.modo === "examen" && d.vence <= Date.now() ? "Ver resultado (tiempo agotado)" : "Continuar intento";
+  }
+
+  function continuarSesion() {
+    var d = leerSesion();
+    if (!d) { pintarSesion(); return; }
+    estado = d;
+    estado.intervalo = null;
+    $("etiqueta-modo").textContent = d.modo === "examen" ? "Examen" : "Práctica";
+    $("cronometro").hidden = d.modo !== "examen";
+    $("cronometro").classList.remove("alerta");
+    $("mapa-grilla").hidden = !d.mapaAbierto;
+    $("btn-mapa").setAttribute("aria-expanded", String(!!d.mapaAbierto));
+    $("btn-mapa").classList.toggle("abierto", !!d.mapaAbierto);
+    if (d.modo === "examen") {
+      d.restante = Math.max(0, Math.ceil((d.vence - Date.now()) / 1000));
+      if (!d.restante) { finalizar(true); return; }
+      iniciarCronometro();
+    }
+    mostrarPantalla("pantalla-examen");
+    pintarPregunta();
+  }
+
+  function botonPracticar(tema, modulo) {
+    var b = crear("button", "btn btn-secundario practicar-tema", "Practicar este tema");
+    b.addEventListener("click", function () {
+      document.querySelector('input[name=modulo][value="' + modulo + '"]').checked = true;
+      document.querySelector('input[name=modo][value=practica]').checked = true;
+      temasElegidos = [tema];
+      dificultadElegida = "todas";
+      cantidadElegida = 10;
+      pintarDificultades();
+      volverAlInicio();
+      $("btn-comenzar").focus();
+    });
+    return b;
+  }
+
+  function pintarPlan() {
+    var cont = $("plan-repaso");
+    cont.innerHTML = "";
+    var grupos = {};
+    estado.preguntas.forEach(function (p) {
+      var clave = p.base.modulo + "|" + p.base.tema;
+      if (!grupos[clave]) grupos[clave] = { tema: p.base.tema, modulo: p.base.modulo, total: 0, errores: 0, omitidas: 0, dudas: 0, refs: [] };
+      var g = grupos[clave];
+      g.total++;
+      if (p.respuesta === null) g.omitidas++;
+      else if (p.respuesta !== p.correcta) g.errores++;
+      if (p.marcada) g.dudas++;
+      if ((p.respuesta !== p.correcta || p.marcada) && g.refs.indexOf(p.base.referencia) < 0) g.refs.push(p.base.referencia);
+    });
+    var lista = Object.values(grupos).filter(function (g) { return g.refs.length; });
+    lista.sort(function (a, b) { return (b.errores + b.omitidas) / b.total - (a.errores + a.omitidas) / a.total || b.dudas - a.dudas; });
+    if (!lista.length) cont.appendChild(crear("p", "ayuda", "Resolviste todas las preguntas sin dejar marcas. Podés probar otros temas o subir la dificultad."));
+    lista.forEach(function (g) {
+      var tarjeta = crear("div", "tema-fila");
+      tarjeta.appendChild(crear("h3", null, "M" + g.modulo + " · " + g.tema));
+      tarjeta.appendChild(crear("p", "ayuda", g.errores + " incorrectas · " + g.omitidas + " omitidas · " + g.dudas + " marcadas · " + g.total + " evaluadas"));
+      var refs = crear("details", "repaso-material");
+      refs.appendChild(crear("summary", null, "Páginas para repasar (" + g.refs.length + " referencias)"));
+      g.refs.forEach(function (ref) { refs.appendChild(crearReferencia(ref)); });
+      tarjeta.appendChild(refs);
+      var n = BANCO.filter(function (p) { return p.modulo === g.modulo && p.tema === g.tema; }).length;
+      tarjeta.appendChild(crear("p", "ayuda", "Tanda sugerida: " + Math.min(10, n) + " preguntas en Práctica, de todas las dificultades."));
+      tarjeta.appendChild(botonPracticar(g.tema, g.modulo));
+      cont.appendChild(tarjeta);
+    });
+  }
+
   function pintarHistorial() {
     var datos = leerHistorial(), cont = $("historial"), lista = $("lista-historial");
     lista.innerHTML = "";
@@ -340,6 +502,14 @@
       var pct = Math.round(h.aciertos / h.total * 100);
       li.appendChild(crear("span", "hist-nota t-" + nivel(pct),
         h.aciertos + "/" + h.total + "  ·  " + pct + "%"));
+      if (h.detalle && estadoValido(h.detalle)) {
+        var ver = crear("button", "btn btn-secundario", "Ver detalle");
+        ver.addEventListener("click", function () {
+          estado = JSON.parse(JSON.stringify(h.detalle));
+          finalizar(estado.porTiempo, true);
+        });
+        li.appendChild(ver);
+      } else { li.appendChild(crear("small", "ayuda", "Sin detalle guardado")); }
       lista.appendChild(li);
     });
   }
@@ -407,6 +577,7 @@
   /* Recalcula cuántas preguntas quedan con lo elegido y ajusta
      las pastillas de cantidad, el aviso y el botón Comenzar. */
   function actualizarDisponibles() {
+    pintarTemas();
     var modulo = leerModuloElegido();
     var total = disponibles(modulo, dificultadElegida).length;
     var aviso = $("aviso-inicio");
@@ -454,6 +625,7 @@
     return {
       modulo: leerModuloElegido(),
       modo: document.querySelector("input[name=modo]:checked").value,
+      temas: temasElegidos === null ? null : temasElegidos.slice(),
       dificultad: dificultadElegida,
       cantidad: cantidadElegida
     };
@@ -462,18 +634,21 @@
   /* ══════════════ EXAMEN ══════════════ */
 
   function comenzar() {
+    if (leerSesion() && !window.confirm("¿Reemplazar el intento guardado por uno nuevo?")) return;
     var cfg = leerConfig();
     var elegidas = elegirPreguntas(cfg.modulo, cfg.dificultad, cfg.cantidad);
     if (!elegidas.length) { actualizarDisponibles(); return; }
 
     estado = {
       modulo: cfg.modulo,
+      temas: cfg.temas,
       modo: cfg.modo,
       dificultad: cfg.dificultad,
       preguntas: elegidas.map(prepararPregunta),
       actual: 0,
       inicio: Date.now(),
       restante: elegidas.length * SEGUNDOS_POR_PREGUNTA,
+      vence: Date.now() + elegidas.length * SEGUNDOS_POR_PREGUNTA * 1000,
       intervalo: null,
       terminado: false,
       mapaAbierto: false
@@ -484,6 +659,7 @@
     $("cronometro").classList.remove("alerta");
     $("mapa-grilla").hidden = true;
     $("btn-mapa").setAttribute("aria-expanded", "false");
+    $("btn-mapa").classList.remove("abierto");
 
     if (cfg.modo === "examen") iniciarCronometro();
 
@@ -494,7 +670,7 @@
   function iniciarCronometro() {
     $("cronometro").textContent = formatearTiempo(estado.restante);
     estado.intervalo = window.setInterval(function () {
-      estado.restante--;
+      estado.restante = Math.max(0, Math.ceil((estado.vence - Date.now()) / 1000));
       var c = $("cronometro");
       c.textContent = formatearTiempo(estado.restante);
       if (estado.restante <= 60) c.classList.add("alerta");
@@ -631,6 +807,7 @@
   /* ── Mapa de preguntas ───────────────────────────────── */
 
   function pintarMapa() {
+    guardarSesion();
     var sinResponder = 0, marcadas = 0;
     estado.preguntas.forEach(function (p) {
       if (p.respuesta === null) sinResponder++;
@@ -671,6 +848,7 @@
 
   function alternarMapa() {
     estado.mapaAbierto = !estado.mapaAbierto;
+    guardarSesion();
     $("mapa-grilla").hidden = !estado.mapaAbierto;
     $("btn-mapa").setAttribute("aria-expanded", estado.mapaAbierto ? "true" : "false");
     $("btn-mapa").classList.toggle("abierto", estado.mapaAbierto);
@@ -721,13 +899,15 @@
   }
 
   function salir() {
-    if (!window.confirm("¿Salir del intento? Se pierden las respuestas cargadas.")) return;
+    if (!guardarSesion() && !window.confirm("No se pudo guardar. ¿Salir y perder este intento?")) return;
     detenerCronometro();
     estado = null;
     volverAlInicio();
   }
 
   function volverAlInicio() {
+    cerrarPanel();
+    pintarSesion();
     pintarConteos();
     pintarHistorial();
     actualizarDisponibles();
@@ -736,14 +916,16 @@
 
   /* ══════════════ RESULTADO ══════════════ */
 
-  function finalizar(porTiempo) {
+  function finalizar(porTiempo, soloLectura) {
     detenerCronometro();
     estado.terminado = true;
 
     var total = estado.preguntas.length;
     var aciertos = estado.preguntas.filter(function (p) { return p.respuesta === p.correcta; }).length;
     var pct = Math.round(aciertos / total * 100);
-    var segundos = Math.round((Date.now() - estado.inicio) / 1000);
+    var segundos = estado.segundos !== undefined ? estado.segundos : Math.round((Date.now() - estado.inicio) / 1000);
+    estado.segundos = segundos;
+    estado.porTiempo = porTiempo;
 
     // Marcador
     $("porcentaje").textContent = pct + "%";
@@ -783,6 +965,7 @@
     $("res-tiempo").textContent = formatearTiempo(segundos);
 
     pintarDesglose();
+    pintarPlan();
     pintarDesgloseDificultad();
     pintarRevision("todas");
 
@@ -792,6 +975,8 @@
       filtros[i].classList.toggle("activo", filtros[i].dataset.filtro === "todas");
     }
 
+    if (!soloLectura) {
+    borrarSesion();
     registrarErradas(estado.preguntas);
     guardarEnHistorial({
       fecha: new Date().toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit", year: "numeric" }),
@@ -799,8 +984,10 @@
       modo: estado.modo,
       dificultad: estado.dificultad,
       aciertos: aciertos,
-      total: total
+      total: total,
+      detalle: copiaEstado()
     });
+    }
 
     mostrarPantalla("pantalla-resultado");
   }
@@ -838,7 +1025,9 @@
     cont.innerHTML = "";
     orden.forEach(function (t) {
       var d = porTema[t];
-      cont.appendChild(filaDesglose("M" + d.modulo + " · " + t, d.ok, d.total));
+      var fila = filaDesglose("M" + d.modulo + " · " + t, d.ok, d.total);
+      fila.appendChild(botonPracticar(t, d.modulo));
+      cont.appendChild(fila);
     });
   }
 
@@ -987,8 +1176,15 @@
     pintarHistorial();
 
     var radios = document.querySelectorAll("input[name=modulo]");
+    pintarSesion();
+    $("btn-continuar").addEventListener("click", continuarSesion);
+    $("btn-descartar").addEventListener("click", function () {
+      if (window.confirm("¿Descartar las respuestas del intento guardado?")) { borrarSesion(); pintarSesion(); }
+    });
+    $("btn-todos-temas").addEventListener("click", function () { temasElegidos = null; actualizarDisponibles(); });
+    $("btn-ningun-tema").addEventListener("click", function () { temasElegidos = []; actualizarDisponibles(); });
     for (var r = 0; r < radios.length; r++) {
-      radios[r].addEventListener("change", actualizarDisponibles);
+      radios[r].addEventListener("change", function () { temasElegidos = null; actualizarDisponibles(); });
     }
 
     $("btn-comenzar").addEventListener("click", comenzar);
@@ -998,7 +1194,17 @@
     $("btn-marcar").addEventListener("click", alternarMarca);
     $("btn-mapa").addEventListener("click", alternarMapa);
 
-    $("btn-reintentar").addEventListener("click", comenzar);
+    $("btn-reintentar").addEventListener("click", function () {
+      var radio = document.querySelector('input[name=modulo][value="' + estado.modulo + '"]');
+      if (radio) radio.checked = true;
+      document.querySelector('input[name=modo][value="' + estado.modo + '"]').checked = true;
+      temasElegidos = estado.temas || null;
+      dificultadElegida = estado.dificultad;
+      cantidadElegida = estado.preguntas.length;
+      pintarDificultades();
+      actualizarDisponibles();
+      comenzar();
+    });
     $("btn-inicio").addEventListener("click", volverAlInicio);
 
     $("panel-cerrar").addEventListener("click", cerrarPanel);

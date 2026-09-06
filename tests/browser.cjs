@@ -1,0 +1,88 @@
+// Ejecutar con Playwright disponible: node tests/browser.cjs
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+const { pathToFileURL } = require('node:url');
+const path = require('node:path');
+
+(async () => {
+  const browser = await chromium.launch({ channel: 'msedge', headless: true });
+  try {
+    const page = await browser.newPage();
+    const errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    page.on('dialog', d => d.accept());
+    const url = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
+    await page.goto(url);
+    await page.evaluate(() => localStorage.clear());
+    await page.reload();
+    assert.equal(await page.locator('#sel-temas input:checked').count(), 10);
+    await page.click('#btn-ningun-tema');
+    assert.equal(await page.locator('#btn-comenzar').isDisabled(), true);
+    const tema = await page.locator('#sel-temas input').first().getAttribute('data-tema');
+    await page.locator('#sel-temas input').first().check();
+    await page.click('#sel-cantidad button[data-n="10"]');
+    await page.click('#btn-comenzar');
+    let saved = await page.evaluate(() => JSON.parse(localStorage.getItem('epe_examen_sesion')));
+    assert(saved.preguntas.every(p => p.base.tema === tema));
+    await page.locator('#opciones button').nth((saved.preguntas[0].correcta + 1) % 4).click();
+    await page.click('#btn-marcar');
+    await page.click('#btn-siguiente');
+    await page.click('#btn-mapa');
+    saved = await page.evaluate(() => JSON.parse(localStorage.getItem('epe_examen_sesion')));
+    await page.reload();
+    assert(await page.locator('#sesion-pendiente').isVisible());
+    await page.click('#btn-continuar');
+    assert.match(await page.locator('#contador').innerText(), /2 de 10/);
+    assert(await page.locator('#mapa-grilla').isVisible());
+    await page.click('#btn-anterior');
+    assert.equal(await page.locator('#btn-marcar').getAttribute('aria-pressed'), 'true');
+    assert.equal(await page.locator('#opciones button').first().isDisabled(), true);
+    assert.deepEqual(await page.locator('#opciones .opcion-texto').allTextContents(), saved.preguntas[0].opciones);
+    await page.click('#btn-salir');
+    await page.click('#btn-continuar');
+    await page.locator('#mapa-grilla button').last().click();
+    await page.click('#btn-siguiente');
+    assert(await page.locator('#pantalla-resultado').evaluate(e => e.classList.contains('activa')));
+    assert.match(await page.locator('#plan-repaso').innerText(), /1 incorrectas/);
+    assert.match(await page.locator('#plan-repaso').innerText(), /9 omitidas/);
+    assert.equal(await page.evaluate(() => localStorage.getItem('epe_examen_sesion')), null);
+    const history = await page.evaluate(() => localStorage.getItem('epe_examen_historial'));
+    const mistakes = await page.evaluate(() => localStorage.getItem('epe_examen_erradas'));
+    await page.click('#btn-inicio');
+    await page.locator('#lista-historial button').first().click();
+    assert.equal(await page.evaluate(() => localStorage.getItem('epe_examen_historial')), history);
+    assert.equal(await page.evaluate(() => localStorage.getItem('epe_examen_erradas')), mistakes);
+    await page.locator('#plan-repaso .practicar-tema').first().click();
+    assert.equal(await page.locator('#sel-temas input:checked').count(), 1);
+    assert.equal(await page.locator('#sel-temas input:checked').getAttribute('data-tema'), tema);
+    await page.locator('label').filter({ has: page.locator('input[name=modo][value=examen]') }).click();
+    await page.click('#btn-comenzar');
+    await page.evaluate(() => {
+      const d = JSON.parse(localStorage.getItem('epe_examen_sesion'));
+      d.vence = Date.now() - 1000;
+      localStorage.setItem('epe_examen_sesion', JSON.stringify(d));
+    });
+    await page.reload();
+    await page.click('#btn-continuar');
+    assert.equal(await page.locator('#titulo-resultado').innerText(), 'Se agotó el tiempo');
+    await page.click('#btn-inicio');
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.screenshot({ path: path.join(process.env.TEMP, 'epe-mobile.png'), fullPage: true, animations: 'disabled' });
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.setViewportSize({ width: 320, height: 720 });
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.emulateMedia({ colorScheme: 'dark' });
+    await page.screenshot({ path: path.join(process.env.TEMP, 'epe-desktop-dark.png'), fullPage: true, animations: 'disabled' });
+    await page.evaluate(() => localStorage.setItem('epe_examen_sesion', '{broken'));
+    await page.reload();
+    assert.equal(await page.locator('#sesion-pendiente').isVisible(), false);
+    await page.evaluate(() => {
+      Storage.prototype.setItem = function () { throw new Error('quota'); };
+    });
+    await page.click('#btn-comenzar');
+    assert(await page.locator('#aviso-guardado').isVisible());
+    assert.deepEqual(errors, []);
+    console.log('OK: temas, recuperación, respuestas y marcas, historial sin efectos secundarios, repaso, vencimiento, móvil y fallos de almacenamiento.');
+  } finally { await browser.close(); }
+})().catch(e => { console.error(e); process.exit(1); });

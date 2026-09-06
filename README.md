@@ -11,6 +11,11 @@ build. También corre en local abriendo `index.html` con doble clic.
 
 ## Qué incluye
 
+- **Selección de temas** con casillas agrupadas por módulo, conteos según dificultad y acciones para seleccionar todos o limpiar. Se combina con el repaso de erradas.
+- **Recuperación automática**: guarda respuestas, orden de opciones, posición y marcas en este navegador. «Guardar y salir» permite continuar después. En Examen, el tiempo sigue corriendo con la página cerrada; si vence, al continuar se muestra el resultado.
+- **Plan de repaso** por intento: prioriza temas con errores u omisiones, incluye las marcadas y enlaza al material. «Practicar este tema» prepara una tanda de hasta 10 preguntas para revisar la configuración antes de comenzar.
+- **Historial detallado** de los últimos 8 intentos nuevos, con respuestas, explicaciones y plan de repaso. Los intentos anteriores a esta función conservan solamente su resumen. Abrir un detalle no modifica las erradas ni vuelve a registrar el intento.
+
 - **210 preguntas**: 92 del Módulo 1 y 118 del Módulo 2, repartidas en 10 temas.
 - **Tres niveles**: 75 fáciles, 80 medias y 55 difíciles.
 - **Dos modos**: *Práctica* (corrige al instante y muestra la explicación) y
@@ -72,3 +77,7 @@ El detalle de la codificación, el formato de `referencia` y el resto del
 procedimiento están en `LEEME.txt`.
 
 Guardá siempre en UTF-8.
+
+## Verificación
+
+`node --check app.js` comprueba la sintaxis. `node tests/browser.cjs` ejecuta pruebas de navegador con Playwright disponible y Microsoft Edge instalado: selección de temas, recuperación, historial, repaso, vencimiento, ancho móvil y almacenamiento no disponible. Playwright se usa solo para desarrollo; el sitio sigue sin dependencias.

@@ -27,6 +27,24 @@
   --trans:       .16s ease;
 }
 
+.temas-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; }
+.temas-acciones span { color: var(--texto-suave); font-size: 13px; }
+.temas-grupos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.temas-grupo { min-width: 0; margin: 0; padding: 12px; border: 1px solid var(--borde); border-radius: var(--radio); }
+.temas-grupo legend { font-weight: 700; padding: 0 6px; }
+.tema-opcion { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 2px 10px; padding: 12px; margin: 6px 0; min-height: 48px; border: 1px solid var(--borde); border-radius: var(--radio-chico); cursor: pointer; }
+.tema-opcion:has(input:checked) { background: var(--azul-claro); border-color: var(--azul); }
+.tema-opcion:focus-within { outline: 2px solid var(--azul); outline-offset: 2px; }
+.tema-opcion input { grid-row: span 2; width: 19px; height: 19px; accent-color: var(--azul); align-self: center; }
+.tema-opcion small { grid-column: 2; color: var(--texto-suave); }
+.practicar-tema { margin-top: 12px; }
+.repaso-material { margin: 12px 0; }
+.repaso-material summary { cursor: pointer; padding: 8px 0; }
+.repaso-material .referencia { display: flex; width: 100%; text-align: left; }
+.lista-historial li { flex-wrap: wrap; gap: 12px; }
+.aviso-guardado { position: sticky; top: 0; z-index: 100; margin: 0; padding: 12px; background: var(--rojo-fondo); color: var(--rojo); }
+@media (max-width: 640px) { .temas-grupos { grid-template-columns: 1fr; } }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --azul:        #4aa3d6;
